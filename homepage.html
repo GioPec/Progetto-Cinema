@@ -5,23 +5,47 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="mobiriseicons/30px/mobirise/style.css">
+        <link rel="stylesheet" type="text/css" href="topnav.css">
     </head>
-    <body style="background-color: #434547;">
-        
-        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center
-         navbar-fixed-top navbar-toggleable-sm transparent navbar-short" style="background-color: #2f3133;" name="barra">
 
-            <span style="color:white;" class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
-            <a class="nav-link link text-white" href="homepage.html">Cinema Bode</a>
-            <a class="nav-link link text-white" href="acquista.html">Acquista</a>
-            <a class="nav-link link text-white" href="programmazione.html">Programmazione</a>
-            <a class="nav-link link text-white" href="contatti.html">Contatti</a>
-            <a text-align="right" class="nav-link link text-white" href="carrello.html">Carrello</a>
+    <body style="background-color: #434547;">
+
+        <!-- navbar navbar-expand beta-menu navbar-dropdown align-items-center
+        navbar-fixed-top navbar-toggleable-sm transparent navbar-short        Questi erano i vecchi tag presi da bootstrap, sostituiti da topnav-->
+        
+        <nav class="topnav" name="barra">
+
+            <a href="homepage.html">Cinema Bode
+                <span class="mbri-home" style="color:white; font-size: 30px; text-align: center; padding: 0px 15px; float: left;"></span>
+            </a>
+
+            <a href="acquista.html">Acquista
+                <span class="mbri-cash" style="color:white; font-size: 30px; text-align: center; padding: 0px 15px; float: left;"></span>
+            </a>
+
+            <a href="programmazione.html">Programmazione
+                <span class="mbri-calendar" style="color:white; font-size: 30px; text-align: center; padding: 0px 15px; float: left;"></span>
+            </a>
+
+            <a href="contatti.html">Contatti
+                <span class="mbri-edit" style="color:white; font-size: 30px; text-align: center; padding: 0px 15px; float: left;"></span>
+            </a>
+
+            <a href="carrello.html" style="float: right;">  
+                <span class="mbri-shopping-cart" style="color:white; font-size: 30px; text-align: center; padding: 0px 15px;"></span>
+            </a>
+            <!-- Da notare che per mettere il carrello in fondo a destra, va messo prima del login -->
+
+            <a href="login.html" style="float: right;">Login
+                <span class="mbri-login" style="color:white; font-size: 30px; text-align: center; padding: 0px 15px; float: right;"></span>
+            </a>
+
         </nav>  
 
         <span>
-            <img src="cinema-stelle.jpg" style="width:100%; height:100%;">
+            <!--<img src="cinema-stelle.jpg" style="width: 500%;">-->
+            <!-- Se si decommenta la riga precedente, si può vedere come scorrendo verso il basso la topmav rimanga in cima alla pagina -->
         </span>
     </body>
 </html>
