@@ -23,6 +23,16 @@
   font-size: 17px
 }
 
+.my_div{ /* Stessa struttura navbar modificando qualche cosa*/
+  font-family: "montserrat";
+  float: center;  /* Allinea a sinistra */
+  color: white;
+  text-align: center;
+  padding: 18px 22px;   /* Distanza tra un link e l'altro */
+  text-decoration: none;
+  
+}
+
 /* Cambia il colore dei link al passaggio del puntatore */
 .topnav a:hover {
   background-color: rgb(141, 0, 0);
@@ -33,4 +43,20 @@
    text-align: center;
    padding: 0px 15px;
    float: left;
+  /* https://codepen.io/sosuke/pen/Pjoqqp questo sito crea i colori se messi in imput come esadecimali*/  
+   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)
+   /*filter: invert(52%) sepia(19%) saturate(7478%) hue-rotate(7deg) brightness(91%) contrast(94%); ARANCIONE */
+   /*filter: invert(85%) sepia(60%) saturate(3472%) hue-rotate(354deg) brightness(101%) contrast(96%); GIALLO */
+  
  }
+
+html{height: 100%;} /*non so perche se metto cosi carica prima lo sfondo |||||||||| COMMENTO DA TOGLIERE |||||||||||*/ 
+
+body{/*evita che la navbar vado a coprire parte del body*/
+  padding-top: 65px;
+  height: 100%;
+}
+.sfondo { /*Questo per ora tiene sotto il footer anche senza immagine, ma dobbiamo risolvere*/
+  height: 100%;
+  border: 1px solid red; /*serve solo a far capire i limiti delle cose, poi lo togliamo*/
+}
