@@ -6,6 +6,7 @@
     background-color: #2f3133;
     height: 65px;
     position: fixed;
+    overflow: hidden;
     top: 0; /* Mette la topnav in cima alla pagina */
     width: 100%; /* Rende la topnav larga quanto la pagina - utile se si zoomma */
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
