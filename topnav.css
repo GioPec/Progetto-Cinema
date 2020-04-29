@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importa monserrat in tutte le dimensioni possibili. È un font simile a quello che ci piaceva, preso da google fonts*/
+
+/* Barra di navigazione in cima alla pagina */
+.topnav {
+    background-color: #2f3133;
+    height: 65px;
+    position: fixed;
+    overflow: hidden;
+    top: 0; /* Mette la topnav in cima alla pagina */
+    width: 100%; /* Rende la topnav larga quanto la pagina - utile se si zoomma */
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+/* Link all'interno della topnav */
+.topnav a {
+  font-family: "montserrat";
+  float: left;  /* Allinea a sinistra */
+  color: white;
+  text-align: center;
+  padding: 18px 22px;   /* Distanza tra un link e l'altro */
+  text-decoration: none;
+  font-size: 17px
+}
+
+/* Cambia il colore dei link al passaggio del puntatore */
+.topnav a:hover {
+  background-color: rgb(141, 0, 0);
+  transition: 0.2s;
+}
+
+/* Colora il link attivo (TODO???)
+.topnav a.active {
+  background-color: #white;
+  color: black;
+}
+ */
+
+ .icona {
+   text-align: center;
+   padding: 0px 15px;
+   float: left;
+ }
