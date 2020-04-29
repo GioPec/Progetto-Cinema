@@ -29,9 +29,15 @@
   transition: 0.2s;
 }
 
-/* Colora il link attivo (TODO???) 
+/* Colora il link attivo (TODO???)
 .topnav a.active {
   background-color: #white;
   color: black;
 }
-*/
+ */
+
+ .icona {
+   text-align: center;
+   padding: 0px 15px;
+   float: left;
+ }
