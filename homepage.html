@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Homepage Cinema Bode</title>
+        <link rel="icon" href="/icona.ico"/>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> <!--serve per il menu a tendina..-->
@@ -17,80 +18,56 @@
 
         <!-- navbar navbar-expand beta-menu navbar-dropdown align-items-center
         navbar-fixed-top navbar-toggleable-sm transparent navbar-short        Questi erano i vecchi tag presi da bootstrap, sostituiti da topnav-->
-        
-        
-
-
-
-
 
         <nav  class=" navbar navbar-expand-md navbar-dark bg-dark fixed-top " style="text-align: center;"  >
         
-            <!--adesso ho messo qui il css perchè non ho usato la classe topnav-->
-            <style type="text/css">
-                a:hover {
-                background-color: rgb(141, 0, 0);
-                transition: 0.2s;
-                /*height: 60px;*/
-                }
-                a {
-                    font-family: "montserrat";
-                    float: left;  /* Allinea a sinistra */
-                    color: white;
-                    text-align: center;
-                    padding: 18px 22px;   /* Distanza tra un link e l'altro */
-                    text-decoration: none;
-                    font-size: 17px;
-                }
-             </style>
-
-
              <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
                 <span class="navbar-toggler-icon"></span>
            </button>
-           
-          
-                                                    
+                                                
             <div class="collapse navbar-collapse " id="collapse_target"><!--id deve essere uguale a data-target-->
             
                 <!--creo la prima unordered list per gli elementi a sinistra-->
                 <!--ho messo i padding e alcune cose del css qua dentro poi da rivedere-->
             <ul class="navbar-nav" >
+
                 <li class="nav-item" style="padding-right: 15px;">
-                    <a class="nav-link" href="homepage.html" style="color: white;text-align: center; font-family: 'montserrat';">Cinema Bode
+                    <a class="nav-link" href="homepage.html" style="color: white;">Cinema Bode
                         <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-home.svg"/>
                     </a>
                 </li>
                 <li class="nav-item" style="padding-right: 15px;">
-                    <a class="nav-link" href="acquista.html" style="color: white;text-align: center; font-family: 'montserrat';">Acquista
+                    <a class="nav-link" href="acquista.html" style="color: white;">Acquista
                         <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-cash.svg"/>
                     </a>
                 </li>
                 <li class="nav-item" style="padding-right: 15px;">
-                    <a class="nav-link" href="programmazione.html"style="color: white;text-align: center; font-family: 'montserrat';">Programmazione
+                    <a class="nav-link" href="programmazione.html" style="color: white;">Programmazione
                         <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
                     </a>
                 </li>
                 <li class="nav-item" style="padding-right: 15px;">
-                    <a class="nav-link" href="contatti.html" style="color: white;text-align: center; font-family: 'montserrat';">Contatti
+                    <a class="nav-link" href="contatti.html" style="color: white;">Contatti
                         <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-edit.svg"/>
                     </a>
                 </li>
+
           </ul>
             <!--creo la seconda unordered list per gli elementi a destra-->
            <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
+
                 <li class="nav-item "style="padding-right: 15px;">
-                    <a class="nav-link" href="login.html" style="color: white;text-align: center; font-family: 'montserrat';">Login
+                    <a class="nav-link" href="login.html" style="color: white;">Login
                         <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
                     </a>
                 </li>
-
                 <li class="nav-item ">
-                    <a class="nav-link"  href="carrello.html"style="color: white;text-align: center; font-family: 'montserrat';" >  
+                    <a class="nav-link"  href="carrello.html">  
                         <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
                     </a>
                 </li>
+
             </ul>
        </div>
     
@@ -110,15 +87,15 @@
          
             <div class="my_div">
                 Contattaci qui :
-                <!--non so perchè ha messo i bottoni a sinistra...-->
                 <a href="#" class="btn btn-primary btn-lg, fa fa-facebook" role="button"></a>
-                <a href="#" class="btn btn-primary btn-lg, fa fa-twitter" role="button"></a> <!--per qualche motivo è piu largo-->
+                <a href="#" class="btn btn-primary btn-lg, fa fa-twitter" role="button"></a>
             
             </div>
 
             <div class="my_div" style="background-color:brown;">
                 © 2020 Copyright: Cinema Bode.
             </div>
+
         </footer>
     </body>
 </html>

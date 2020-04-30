@@ -13,7 +13,7 @@
 }
 
 /* Link all'interno della topnav */
-.topnav a {
+.navbar a {
   font-family: "montserrat";
   float: left;  /* Allinea a sinistra */
   color: white;
@@ -21,6 +21,16 @@
   padding: 18px 22px;   /* Distanza tra un link e l'altro */
   text-decoration: none;
   font-size: 17px
+}
+
+/* Cambia il colore dei link al passaggio del puntatore */
+.navbar a:hover {
+  background-color: rgb(141, 0, 0);
+  transition: 0.2s;
+}
+
+.nav-link a {
+  color: white;
 }
 
 .my_div{ /* Stessa struttura navbar modificando qualche cosa*/
@@ -33,11 +43,6 @@
   
 }
 
-/* Cambia il colore dei link al passaggio del puntatore */
-.topnav a:hover {
-  background-color: rgb(141, 0, 0);
-  transition: 0.2s;
-}
 
  .icona {
    text-align: center;
