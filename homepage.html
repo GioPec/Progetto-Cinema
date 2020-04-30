@@ -4,11 +4,13 @@
         <title>Homepage Cinema Bode</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> <!--serve per il menu a tendina..-->
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
         <link rel="stylesheet" type="text/css" href="mobiriseicons/30px/mobirise/style.css">
         <link rel="stylesheet" type="text/css" href="topnav.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script> <!--serve per il menu a tendina..-->
     </head>
 
     <body style="background-color: #434547;">
@@ -16,47 +18,99 @@
         <!-- navbar navbar-expand beta-menu navbar-dropdown align-items-center
         navbar-fixed-top navbar-toggleable-sm transparent navbar-short        Questi erano i vecchi tag presi da bootstrap, sostituiti da topnav-->
         
-        <nav class="topnav" name="barra">
-
-            <a href="homepage.html">Cinema Bode
-                <img class="icona" src="mobiriseicons/30px/svg/mbri-home.svg"/>
-            </a>
-
-            <a href="acquista.html">Acquista
-                <img class="icona" src="mobiriseicons/30px/svg/mbri-cash.svg"/>
-            </a>
-
-            <a href="programmazione.html">Programmazione
-                <img class="icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
-            </a>
-
-            <a href="contatti.html">Contatti
-                <img class="icona" src="mobiriseicons/30px/svg/mbri-edit.svg"/>
-            </a>
-
-            <a href="carrello.html" style="float: right;">  
-                <img class="icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
-            </a>
-            <!-- Da notare che per mettere il carrello in fondo a destra, va messo prima del login -->
-
-            <a href="login.html" style="float: right;">Login
-                <img class="icona" src="mobiriseicons/30px/svg/mbri-login.svg" style="float: right"/>
-            </a>
-
-        </nav>
         
-        <section class="sfondo">
+
+
+
+
+
+        <nav  class=" navbar navbar-expand-md navbar-dark bg-dark fixed-top " style="text-align: center;"  >
+        
+            <!--adesso ho messo qui il css perchè non ho usato la classe topnav-->
+            <style type="text/css">
+                a:hover {
+                background-color: rgb(141, 0, 0);
+                transition: 0.2s;
+                /*height: 60px;*/
+                }
+                a {
+                    font-family: "montserrat";
+                    float: left;  /* Allinea a sinistra */
+                    color: white;
+                    text-align: center;
+                    padding: 18px 22px;   /* Distanza tra un link e l'altro */
+                    text-decoration: none;
+                    font-size: 17px;
+                }
+             </style>
+
+
+             <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
+           <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+                <span class="navbar-toggler-icon"></span>
+           </button>
+           
+          
+                                                    
+            <div class="collapse navbar-collapse " id="collapse_target"><!--id deve essere uguale a data-target-->
+            
+                <!--creo la prima unordered list per gli elementi a sinistra-->
+                <!--ho messo i padding e alcune cose del css qua dentro poi da rivedere-->
+            <ul class="navbar-nav" >
+                <li class="nav-item" style="padding-right: 15px;">
+                    <a class="nav-link" href="homepage.html" style="color: white;text-align: center; font-family: 'montserrat';">Cinema Bode
+                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-home.svg"/>
+                    </a>
+                </li>
+                <li class="nav-item" style="padding-right: 15px;">
+                    <a class="nav-link" href="acquista.html" style="color: white;text-align: center; font-family: 'montserrat';">Acquista
+                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-cash.svg"/>
+                    </a>
+                </li>
+                <li class="nav-item" style="padding-right: 15px;">
+                    <a class="nav-link" href="programmazione.html"style="color: white;text-align: center; font-family: 'montserrat';">Programmazione
+                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
+                    </a>
+                </li>
+                <li class="nav-item" style="padding-right: 15px;">
+                    <a class="nav-link" href="contatti.html" style="color: white;text-align: center; font-family: 'montserrat';">Contatti
+                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-edit.svg"/>
+                    </a>
+                </li>
+          </ul>
+            <!--creo la seconda unordered list per gli elementi a destra-->
+           <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
+                <li class="nav-item "style="padding-right: 15px;">
+                    <a class="nav-link" href="login.html" style="color: white;text-align: center; font-family: 'montserrat';">Login
+                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link"  href="carrello.html"style="color: white;text-align: center; font-family: 'montserrat';" >  
+                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
+                    </a>
+                </li>
+            </ul>
+       </div>
+    
+    </nav>
+
+    <section >
+        <img src="cinema-stelle.jpg" class="img-fluid"> <!--con questa classe adatto la foto ai ridimensionamenti-->
+    </section>
+       <!---- -->
            <!-- <img src="cinema-stelle.jpg" style="width: 100%;">-->
             <!-- Se si decommenta la riga precedente, si può vedere come scorrendo verso il basso la topmav rimanga in cima alla pagina -->
-            <img src="https://source.unsplash.com/AtPWnYNDJnM/1348x590"> <!--Imagine provvisoria a caso-->
-        </section>
+           <!---- <img class="sfondo" src="https://source.unsplash.com/AtPWnYNDJnM/1348x590" > --><!--Imagine provvisoria a caso-->
+        <!---->
 
 
         <footer name="bottomdiv" style="background-color:chocolate;">
          
             <div class="my_div">
                 Contattaci qui :
-                
+                <!--non so perchè ha messo i bottoni a sinistra...-->
                 <a href="#" class="btn btn-primary btn-lg, fa fa-facebook" role="button"></a>
                 <a href="#" class="btn btn-primary btn-lg, fa fa-twitter" role="button"></a> <!--per qualche motivo è piu largo-->
             
