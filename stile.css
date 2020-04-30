@@ -61,8 +61,15 @@ body{/*evita che la navbar vado a coprire parte del body*/
 }
 .sfondo { /*Questo per ora tiene sotto il footer anche senza immagine, ma dobbiamo risolvere*/
   height: 100%;
-  /*border: 1px solid red; serve solo a far capire i limiti delle cose, poi lo togliamo*/
 }
+
+
+.blocco{
+ /* border: 1px solid red;*/
+  background-color: #2676c0;;
+  float: left;
+}
+
 
 
 
