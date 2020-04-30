@@ -35,7 +35,7 @@
 
 .my_div{ /* Stessa struttura navbar modificando qualche cosa*/
   font-family: "montserrat";
-  float: center;  /* Allinea a sinistra */
+  float: center;  /* Allinea al centro */
   color: white;
   text-align: center;
   padding: 18px 22px;   /* Distanza tra un link e l'altro */
@@ -43,8 +43,7 @@
   
 }
 
-
- .icona {
+.icona {
    text-align: center;
    padding: 1px 1px;
    float: left;
@@ -53,7 +52,7 @@
    /*filter: invert(52%) sepia(19%) saturate(7478%) hue-rotate(7deg) brightness(91%) contrast(94%); ARANCIONE */
    /*filter: invert(85%) sepia(60%) saturate(3472%) hue-rotate(354deg) brightness(101%) contrast(96%); GIALLO */
   
- }
+}
 
 html{height: 100%;} /*non so perche se metto cosi carica prima lo sfondo |||||||||| COMMENTO DA TOGLIERE |||||||||||*/ 
 
