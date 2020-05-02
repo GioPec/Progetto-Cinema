@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> <!--serve per il menu a tendina..-->
         <script src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script> <!--serve per il menu a tendina..-->
-        <link rel="icon" href="/icona.ico" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)"/> <!--Icona del sito-->
+        <link rel="icon" href="/icona.ico"/> <!--Icona del sito-->
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
         <link rel="stylesheet" type="text/css" href="mobiriseicons/30px/mobirise/style.css">
@@ -20,7 +20,7 @@
         <!-- navbar navbar-expand beta-menu navbar-dropdown align-items-center
         navbar-fixed-top navbar-toggleable-sm transparent navbar-short        Questi erano i vecchi tag presi da bootstrap, sostituiti da topnav-->
 
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+        <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
         
              <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
@@ -73,7 +73,7 @@
         </nav>
         <!--############################# Fine navbar ################################-->
 
-        <div class="sfondo img-fluid ">
+        <div class="sfondo img-fluid">
             <!--<img src="cinema-stelle.jpg" class="img-fluid"> con questa classe adatto la foto ai ridimensionamenti-->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -121,33 +121,33 @@
 
         <div style="padding-top: 85px;"></div> <!--serve a riprodurre lo stesso spazio che c'è sotto-->
         <div class="my_div w-100" style="font-size:xx-large; background-color: brown;
-                    margin:auto;"> <!--auto centra orizzontalmente-->
+                    margin:auto; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!--auto centra orizzontalmente-->
             <a href="programmazione.html"><h1 style="color:white;"> I <strong>film</strong> in sala ></h1> </a>
         </div>
 
         <div style="padding-top: 85px;"></div> <!--serve a riprodurre lo stesso spazio che c'è sotto-->
         <div class="my_div w-100" style="font-size:xx-large; background-color:#2676C0;
-                    margin:auto;"> <!--auto centra orizzontalmente-->
+                    margin:auto; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!--auto centra orizzontalmente-->
             <a href="login.html"><h1 style="color:white;"> <strong>Registrati</strong> per ottenere offerte esclusive ></h1> </a>
         </div>
 
         <!--DA QUI PARE IL QUADRATO PREZZI-->
         <div style="padding-top: 85px;"></div> <!--serve a riprodurre lo stesso spazio che c'è sotto-->
         <div class="my_div" style="font-size:xx-large; background-color:chocolate;
-                    max-width: 1200px; width: 50%; margin:auto;"> <!--auto centra orizzontalmente-->
+                    max-width: 1200px; width: 50%; margin:auto; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!--auto centra orizzontalmente-->
             <b>I nostri prezzi </b> 
         </div>
         
-        <div style="width: 50%; max-width: 1200px; margin:auto;">
+        <div style="width: 50%; max-width: 1200px; margin:auto; ">
             <section class="blocco my_div" style="width: 50%; font-size: xx-large; max-height: 250px;
-                    text-overflow: clip; overflow: hidden;"> <!--questa riga serve a non far sforare il testo-->
+                    text-overflow: clip; overflow: hidden; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!--questa riga serve a non far sforare il testo-->
                 <u style="text-align: center; font-size: xx-large;">Settimanale</u>
                 <p style="font-size: x-large;"> Adulti:&nbsp; 7.50€</p>
                 <p style="font-size: x-large;"> Ridotto:&nbsp; 5.00€</p>
                 <p style="font-size: x-large;"> Università:&nbsp; 3.00€</p>
             </section>
             <section class="blocco my_div" style="width: 50%; font-size: xx-large; max-height: 250px;
-                    text-overflow: clip; overflow: hidden;">
+                    text-overflow: clip; overflow: hidden; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);">
                 <u style="text-align: center; font-size: xx-large;">Weekend</u>
                 <p style="font-size: x-large;"> Adulti:&nbsp; 9.50€</p>
                 <p style="font-size: x-large;"> Ridotto:&nbsp; 6.50€</p>
@@ -161,7 +161,9 @@
         
         <!--############################# Inizio footer ################################-->
         <footer name="bottomdiv" style="background-color:chocolate; bottom: 0;">
-         
+            <a href="#top" id="navBackToTop">
+                <div class="my_div" style="background-color:#2f3133;">Torna su</div>
+            </a>
             <div class="my_div">
                 Contattaci qui:
                 <a href="https://www.facebook.com/" class="btn btn-primary btn-lg, fa fa-facebook" role="button" style="margin: 4px;"></a>

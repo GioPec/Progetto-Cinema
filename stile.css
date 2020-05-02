@@ -69,10 +69,21 @@ body{/*evita che la navbar vado a coprire parte del body*/
 
 .blocco{
  /* border: 1px solid red;*/
-  background-color: #2676c0;;
+  background-color: #2676c0;
   float: left;
 }
 
+.movieimage{
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 7%;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	height: 600px;
+  width:auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
 
 
 
