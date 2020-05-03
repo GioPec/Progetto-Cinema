@@ -29,7 +29,7 @@
   background-color: rgb(141, 0, 0);
   transition: 0.2s;
 }
-.navbar img:hover{  /*per dare al logo le stesse caratteristiche del passagio sul link*/
+.navbar .iconahome:hover{  /*per dare al logo le stesse caratteristiche del passagio sul link*/
   background-color: rgb(141, 0, 0);
   transition: 0.2s;
   cursor: pointer;
