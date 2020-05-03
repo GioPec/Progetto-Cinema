@@ -29,6 +29,11 @@
   background-color: rgb(141, 0, 0);
   transition: 0.2s;
 }
+.navbar img:hover{  /*per dare al logo le stesse caratteristiche del passagio sul link*/
+  background-color: rgb(141, 0, 0);
+  transition: 0.2s;
+  cursor: pointer;
+}
 
 .nav-link a {
   color: white;
@@ -50,6 +55,11 @@
   /* https://codepen.io/sosuke/pen/Pjoqqp questo sito crea i colori se messi in imput come esadecimali*/  
    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)
   
+}
+
+/*icona del logo del cinema*/
+.iconahome {  
+  padding-right: 15px; 
 }
 
 html {height: 100%; } /*non so perche se metto cosi carica prima lo sfondo*/ 
