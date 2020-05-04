@@ -94,5 +94,14 @@ body { /*evita che la navbar vado a coprire parte del body*/
 }
 
 
-
+.filtro{
+  background: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+  /*border: solid red;*/
+  right: 0px;
+}
 
