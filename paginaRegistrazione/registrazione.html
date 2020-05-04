@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Cinema Marco Polo - Login</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width-device-width, initial-scale=1"/>
+        <link rel="icon" href="../img/icona.ico"/> <!--Icona del sito-->
+        <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
+        <link rel="stylesheet" type="text/css" href="../mobiriseicons/30px/mobirise/style.css">
+        <link rel="stylesheet" type="text/css" href="../stile.css">
+        <link rel="stylesheet" type="text/css" href="../signin.css">
+        <script type="text/javascript" lang="javascript" src="../bootstrap-4.4.1/dist/js/bootstrap.min.js"></script>
+        <!--<script type="text/javascript" lang="javascript" src="../js/bootstrap.min.js"></script>-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" lang="javascript" src="RegistrazioneScript.js"></script>
+    </head>
+    <body class="text-center" style="background-color: #434547;" align="center">
+        <form action="registrazione.php" class="form-signin" method="POST" name="myForm" onsubmit="return validaForm()">
+            <img onclick="location.href='../homepage.html'" src="../img/cmp2.png" height="100px" style="margin-top: -75px; margin-bottom: 25px;"/>
+            <h1 style="margin-bottom: 25px;"><strong>Registrazione</strong></h1>
+            <input type="email" name="inputEmail" class="form-control" placeholder="Indirizzo email" required autofocus/>
+            <input type="text" name="inputName" class="form-control" placeholder="Nome" autofocus/>
+            <input type="text" name="inputSurname" class="form-control" placeholder="Cognome" autofocus/>
+            <input type="password" name="inputPassword" class="form-control" placeholder="Password" required/>
+            
+            <div id="divRemember" class="checkbox mb-3">
+                <input type="checkbox" name="remember"/>
+                <label for="remember">Remember me</label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" style="background-color: brown; border: none; 
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" name="loginButton" type="submit">Registration</button> 
+        </form>
+        <br><hr style="max-width: 330px;">
+        <p>Sei gia registrato?</p>
+        <center>
+        <button class="btn btn-sm btn-primary btn-block" style="background-color: chocolate; max-width: 300; border: none; 
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" name="registerButton"
+                onclick="location.href='../paginaLogin/login.html'">Accedi</button>
+        </center>
+
+        <br><br>
+        <footer style="font-size: xx-small;">© 2020 Copyright: Cinema Marco Polo.</footer>
+        
+    </body>
+</html>
