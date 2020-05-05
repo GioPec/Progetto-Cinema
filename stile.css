@@ -26,11 +26,11 @@
 
 /* Cambia il colore dei link al passaggio del puntatore */
 .navbar a:hover {
-  background-color: rgb(141, 0, 0);
+  background-color: brown;
   transition: 0.2s;
 }
 .navbar .iconahome:hover{  /*per dare al logo le stesse caratteristiche del passagio sul link*/
-  background-color: rgb(141, 0, 0);
+  background-color: brown;
   transition: 0.2s;
   cursor: pointer;
 }
@@ -93,15 +93,13 @@ body { /*evita che la navbar vado a coprire parte del body*/
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 }
 
-
 .filtro{
   background: #000;
   height: 100%;
   width: 100%;
   position: absolute;
   z-index: 0;
-  opacity: 0.4;
-  /*border: solid red;*/
+  opacity: 0.5;
   right: 0px;
 }
 
