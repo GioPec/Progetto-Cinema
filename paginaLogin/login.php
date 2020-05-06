@@ -12,7 +12,7 @@
                 $result=pg_query_params($dbconn, $q1, array($email));
                 if(!($line=pg_fetch_array($result, null, PGSQL_ASSOC))){
                     echo "<h1> Sorry you are not a registered user </h1>
-                    <a href=registrazione.html>
+                    <a href=../paginaRegistrazione/registrazione.html>
                     Click here to register
                     </a>";
                 }else{

@@ -8,7 +8,7 @@
                 header("Location: ../homepage.html");
             }else{
                 $email=$_POST['inputEmail'];
-                $q1="select * from utente where email=$1";
+                $q1="select * from utenti where email=$1";
                 $result=pg_query_params($dbconn, $q1, array($email));
                 if($line=pg_fetch_array($result, null, PGSQL_ASSOC)){
                     echo "<h1> Sorry, you are already a registered user</h1>
@@ -17,7 +17,7 @@
                     $nome=$_POST['inputName'];
                     $cognome=$_POST['inputSurname'];
                     $password=($_POST['inputPassword']); //md5
-                    $q2="insert into utente values ($1,$2,$3,$4)";
+                    $q2="insert into utenti values ($1,$2,$3,$4)";
                     $data=pg_query_params($dbconn,$q2,array($email,$nome,$cognome,$password));
                     if($data){
                         //header("Location: registrationCompleted.html");
