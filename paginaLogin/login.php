@@ -16,11 +16,11 @@
                     Click here to register
                     </a>";
                 }else{
-                    $password = ($_POST['inputPassword']);  //md5
+                    $password = md5($_POST['inputPassword']);
                     $q2="select * from utenti where email=$1 and password=$2";
                     $result=pg_query_params($dbconn,$q2, array($email,$password));
                     if(!($line=pg_fetch_array($result,null, PGSQL_ASSOC))){
-                        echo "<h1> The password is wrong! Grrrr</h1>
+                        echo "<h1> The password is erroneous</h1>
                         <a href=login.html>Click here to login
                         </a>";
                     }else{

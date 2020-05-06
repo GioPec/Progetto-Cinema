@@ -16,8 +16,8 @@
                 }else{
                     $nome=$_POST['inputName'];
                     $cognome=$_POST['inputSurname'];
-                    $password=($_POST['inputPassword']); //md5
-                    $q2="insert into utenti values ($1,$2,$3,$4)";
+                    $password=md5($_POST['inputPassword']);
+                    $q2="insert into utenti(email,nome,cognome,password) values ($1,$2,$3,$4)";
                     $data=pg_query_params($dbconn,$q2,array($email,$nome,$cognome,$password));
                     if($data){
                         //header("Location: registrationCompleted.html");
