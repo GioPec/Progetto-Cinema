@@ -78,7 +78,7 @@ body { /*evita che la navbar vado a coprire parte del body*/
 .blocco {
  /* border: 1px solid red;*/
   background-color: #2676c0;
-  float: left;
+  float: center;
 }
 
 .movieimage {
@@ -103,3 +103,17 @@ body { /*evita che la navbar vado a coprire parte del body*/
   right: 0px;
 }
 
+
+/*.table-responsive {width: 50%;}
+
+ stile del bordo per la tabella (facoltativo) 
+.table-responsive table {border: none;}
+
+/* istruzioni per le celle (alcune sono obbligatorie) */
+.table-responsive table td, .table-responsive table th {min-width: 50px; width: 24%; border: none; word-break: keep-all; text-align: center; padding: 1%;}
+
+/* larghezza delle immagini (facoltativo) 
+.table-responsive table td img {max-width: 98%;}*/
+/*
+.table-responsive table td {width: 24%; word-break: break-all;}
+*/
