@@ -1,8 +1,12 @@
+<?php
+    session_start();
+    $_SESSION["utente"]="";
+?>
 <html>
     <head></head>
     <body>
         <?php
-            $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
+            $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
             or die('Could not connect: ' . pg_last_error());
             if(!(isset($_POST['loginButton']))){
                 header("Location: ../homepage.html");
@@ -24,9 +28,10 @@
                         <a href=login.html>Click here to login
                         </a>";
                     }else{
-                        $nome=$line['nome'];
-                        echo "<a href=../Welcome.php?name=$nome> Premi qui
-                        </a> per iniziare ad utilizzare il sito web";
+                        $_SESSION["utente"]=$line['nome'];
+                        header("Location: ../home.php");
+                       /* echo "<a href=../home.php> Premi qui
+                        </a> per iniziare ad utilizzare il sito web";*/
                     }
                 }
            }  
