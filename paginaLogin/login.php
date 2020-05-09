@@ -29,9 +29,8 @@
                     }else{
                         $x = $line['nome'];
                         //$_SESSION["utente"]=$x;
-                        echo "<script>return sessionOK($x);</script>";
                         header("Location: ../homepage.html");
-                       /* echo "<a href=../home.php> Premi qui
+                        /* echo "<a href=../home.php> Premi qui
                         </a> per iniziare ad utilizzare il sito web";*/
                     }
                 }
