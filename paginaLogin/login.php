@@ -1,9 +1,8 @@
-<?php
-    session_start();
-    $_SESSION["utente"]="";
-?>
+
 <html>
-    <head></head>
+    <head>
+        <script type="text/javascript" lang="javascript" src="ScriptLog.js"></script>
+    </head>
     <body>
         <?php
             $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
@@ -28,8 +27,10 @@
                         <a href=login.html>Click here to login
                         </a>";
                     }else{
-                        $_SESSION["utente"]=$line['nome'];
-                        header("Location: ../home.php");
+                        $x = $line['nome'];
+                        //$_SESSION["utente"]=$x;
+                        echo "<script>return sessionOK($x);</script>";
+                        header("Location: ../homepage.html");
                        /* echo "<a href=../home.php> Premi qui
                         </a> per iniziare ad utilizzare il sito web";*/
                     }

@@ -15,9 +15,9 @@
         <script type="text/javascript" lang="javascript" src="ScriptLog.js"></script>
     </head>
 
-    <body class="text-center" style="background-color: #434547;" align="center">
+    <body class="text-center" style="background-color: #434547;" align="center" onbeforeunload="return sessionOK()">
 
-        <form action="login.php" class="form-signin" method="POST" name="myForm" onsubmit="return validaForm()">
+        <form action="login.php" class="form-signin" method="POST" name="myForm">  <!--onsubmit="return validaForm()-->
             <img onclick="location.href='../homepage.html'" src="../img/cmp2.png" height="100px" style="margin-top: -75px; margin-bottom: 25px;"/>
             <h1 style="margin-bottom: 25px;"><strong>Accedi</strong></h1>
             <input type="email" name="inputEmail" class="form-control" placeholder="Indirizzo email" required autofocus/>

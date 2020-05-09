@@ -2,8 +2,6 @@
     session_start();
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -170,14 +168,12 @@
         </div>
         -->
         <center>
-        <div  class="table-responsive blocco"  style=" width:min-content; max-width: 100% ;min-width:40%  ;  margin:auto;  " >
+        <div class="table-responsive blocco" style="width:min-content; max-width: 100%; min-width:40%; margin:auto;">
+            <div style="width:100%; font-size:xx-large; background-color: chocolate;">
+                <b>I nostri prezzi</b>                
+            </div>
             <table>
                 <thead>
-                    <tr>
-                        <th colspan="3" style="font-size:xx-large; background-color:chocolate;">
-                            <b>I nostri prezzi </b> 
-                        </th>
-                    </tr>
                     <tr>
                         <th style="text-align: center; font-size: x-large;">Settimana</th>
                         <th style="text-align: center; font-size: x-large;">Weekend</th>
