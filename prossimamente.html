@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cinema Marco Polo - Homepage</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> <!--serve per il menu a tendina..-->
+        <script src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script> <!--serve per il menu a tendina..-->
+        <script type="text/javascript" src="Vue/vue.min.js"></script>
+        <link rel="icon" href="img/icona.ico"/> <!--Icona del sito-->
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
+        <link rel="stylesheet" type="text/css" href="mobiriseicons/30px/mobirise/style.css">
+        <link rel="stylesheet" type="text/css" href="stile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body style="background-color: #434547;">
+
+        <div id="top">
+            <barratop></barratop>
+            <a name="ancora"></a>
+        </div>
+
+        <!--############################# Fine navbar ################################-->
+        
+        <div name="trailer" align="center" style="padding-top: 50px; padding-bottom: 50px;">
+            <h1 style="font-size: 400%;"><strong>In arrivo</strong></h1>
+        </div>
+        
+
+        <div  id="film"> 
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-xl-8">
+                        <iframe width="100%" height="400px" v-bind:src="trailer" style="border: solid chocolate 12px"
+                        frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+        
+                    <div class="col-lg">
+                        <h2 style="font-size: 250%;"><strong>{{ nomeFilm }}</strong></h2>
+                        <br>
+                        <p>{{ descrizioneFilm }}</p><br>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <h2 class="my_div" style="margin-top: 20px; background-color: #2676C0; margin: auto; width: 90%;">Clicca sulla locandina per vedere il trailer</h2>
+            <br>
+            
+            <div style="background-color: #2f3133; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); width: 90%; margin: auto;
+                height: 40%; white-space: nowrap; overflow-x: scroll;">
+                
+                    <img onclick="location.href='prossimamente.html#ancora'" v-for= "(x,index) in pellicola" :key="x.id" v-bind:src="locandinaFilm" v-on:click="updatePellicola(index)" width="13%" 
+                        style="margin: 20px; margin-right: 9%;"/>
+                
+            </div>
+        </div>
+
+        <br><br><br><br>
+        
+        <!--############################# Inizio footer ################################-->
+      
+        <div id="sotto">
+            <barrasotto></barrasotto>
+        </div>        
+
+        <script type="text/javascript" src="pattern.js"></script>
+        <script type="text/javascript" src="vueTrailer.js"></script>
+    </body>
+</html>

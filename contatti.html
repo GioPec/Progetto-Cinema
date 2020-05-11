@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> <!--serve per il menu a tendina..-->
         <script src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script> <!--serve per il menu a tendina..-->
+        <script type="text/javascript" src="Vue/vue.min.js"></script>
         <link rel="icon" href="img/icona.ico" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)"/> <!--Icona del sito-->
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
@@ -17,58 +18,10 @@
 
     <body style="background-color: #434547;">
 
-        <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
-        
-             <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
-           <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
-                <span class="navbar-toggler-icon"></span>
-           </button>
-                                                
-            <div class="collapse navbar-collapse" id="collapse_target"><!--id deve essere uguale a data-target-->
-            
-                <ul class="navbar-nav" >
-                    <li align="left">   <!--Uso semplicemente il tag <li> con dentro un <img> per il logo del cinema-->
-                        <img onclick="location.href='homepage.html'" class=" iconahome " src="img/cmp2.png" height="70px"/>
-                    </li>
-                    <!--
-                    <li class="nav-item" style="padding-right: 15px;">
-                        <a class="nav-link" href="homepage.html" style="color: white;" >
-                        <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-home.svg"/>-->
-                        <!--<img class="navbar-brand iconahome" src="img/cmp2.png" height="50px" style=" text-align: center;"/>--><!--
-                        </a>
-                    </li>-->
-                    <li class="nav-item" style="padding-right: 15px;">
-                        <a class="nav-link" href="acquista.html" style="color: white;">Acquista
-                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-cash.svg"/>
-                        </a>
-                    </li>
-                    <li class="nav-item" style="padding-right: 15px;">
-                        <a class="nav-link" href="programmazione.html" style="color: white;">Programmazione
-                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
-                        </a>
-                    </li>
-                    <li class="nav-item" style="padding-right: 15px;">
-                        <a class="nav-link" href="contatti.html" style="color: white;">Contatti
-                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-edit.svg"/>
-                        </a>
-                    </li>
-                </ul>
-                <!--creo la seconda unordered list per gli elementi a destra-->
-                <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
-                    <li class="nav-item "style="padding-right: 15px;">
-                        <a class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
-                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link"  href="carrello.html">  
-                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
-                        </a>
-                    </li>
-                </ul>
-            
-            </div>
-        </nav>
+        <div id="top">
+            <barratop></barratop>
+        </div>
+
         <!--############################# Fine navbar ################################-->
 
         <div align="center" style="padding-top: 70px; padding-bottom: 85px;">
@@ -106,22 +59,11 @@
 
         <!--############################# Inizio footer ################################-->
         
-        <footer name="bottomdiv" style="background-color:chocolate; bottom: 0;">
-            <a href="#top" id="navBackToTop">
-                <div class="my_div" style="background-color:#2f3133;">Torna su</div>
-            </a>
-            <div class="my_div">
-                Contattaci qui:
-                <a href="https://www.facebook.com/" class="btn btn-primary btn-lg, fa fa-facebook" role="button" style="margin: 4px;"></a>
-                <a href="https://twitter.com/" class="btn btn-primary btn-lg, fa fa-twitter" role="button" style="margin: 4px;"></a>
-                <a href="https://www.instagram.com/" class="btn btn-primary btn-lg, fa fa-instagram" role="button" style="margin: 4px;"></a>
-                <a href="https://mail.google.com/" class="btn btn-primary btn-lg, fa fa-envelope" role="button" style="margin: 4px;"></a>
-            </div>
+        <div id="sotto">
+            <barrasotto></barrasotto>
+        </div>        
 
-            <div class="my_div" style="background-color:brown;">
-                © 2020 Copyright: Cinema Marco Polo.
-            </div>
+        <script type="text/javascript" src="pattern.js"></script>
 
-        </footer>
     </body>
 </html>
