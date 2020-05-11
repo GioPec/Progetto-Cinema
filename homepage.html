@@ -15,7 +15,8 @@
         <script>
             function foo() {
                 var prima = window.sessionStorage.getItem("nomeUtente");
-                document.getElementById("barraBlu").innerHTML = "tentativo disperato, " + prima;
+                document.getElementById("barraBlu").innerHTML = "Benvenuto, " + prima + "!";
+                document.getElementById("usernameInNavbar").innerHTML = prima;
                 return true;
             }
         </script>
@@ -64,7 +65,7 @@
                 <!--creo la seconda unordered list per gli elementi a destra-->
                 <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
                     <li class="nav-item "style="padding-right: 15px;">
-                        <a class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
+                        <a id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
                             <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
                         </a>
                     </li>

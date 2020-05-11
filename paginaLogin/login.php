@@ -28,10 +28,7 @@
                         </a>";
                     }else{
                         $x = $line['nome'];
-                        //$_SESSION["utente"]=$x;
-                        header("Location: ../homepage.html");
-                        /* echo "<a href=../home.php> Premi qui
-                        </a> per iniziare ad utilizzare il sito web";*/
+                        header("Location: ./redirect.php?username=$x");
                     }
                 }
            }  

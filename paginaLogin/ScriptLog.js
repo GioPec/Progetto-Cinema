@@ -12,3 +12,7 @@ function sessionOK(coso) {
     window.alert(window.sessionStorage.getItem('nomeUtente'));
     return true;
 }
+
+function goToHome(username) { 
+    sessionStorage.setItem("nomeUtente", username);
+}

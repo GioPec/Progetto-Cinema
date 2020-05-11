@@ -1,5 +1,7 @@
 <html>
-    <head></head>
+    <head>
+    <script type="text/javascript" lang="javascript" src="RegistrazioneScript.js"></script>
+    </head>
     <body>
         <?php
             $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
@@ -20,9 +22,8 @@
                     $q2="insert into utenti(email,nome,cognome,password) values ($1,$2,$3,$4)";
                     $data=pg_query_params($dbconn,$q2,array($email,$nome,$cognome,$password));
                     if($data){
-                        //header("Location: registrationCompleted.html");
-                        echo "<h1>Registration is completed. Start using the website <br/></h1>";
-                        echo "<a href=../Welcome.php?name=$nome> Premi qui </a> per iniziare ad usare il sito";
+                        //echo "<script>return registrationOK();</script>";
+                        header("Location: ../paginaLogin/login.html");
                     }
             }
         }
