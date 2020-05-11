@@ -1,0 +1,45 @@
+<html>
+    <head>
+    <title>Prodotto in vendita</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width", initial-scale="1"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="Vue/vue.min.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar"></div>
+        <div id="app">
+            <!--definiamo carrello-->
+            <div class="cart">
+                <p>Carrello ({{ cart }})</p>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img v-bind:src="image" height="700px"/>
+                </div>
+                <div class="product-info">
+                    <h1>Prodotto in vendita: {{ product }}</h1>
+                    Descrizione: {{ description }}
+                    <p v-if="disp > 10 && onSale">Disponibile</p>
+                    <p v-else-if="disp<=10 && disp>0 && onSale" >Ultime scorte!</p>
+                    <p v-else>Non Disponibile</p>
+                    <ul>
+                        <li v-for="x in details">{{ x.text }}</li>
+                    </ul>
+                    <div v-for= "(x,index) in variants" :key="x.id" class="color-box"
+                    v-bind:style="{ backgroundColor: x.htmlColor}">
+                        <p v-on:click="updateProduct(index)"> {{ x.color }} </p>
+                    </div>
+                    <!--
+                    <div v-for="(x,index) in variants" :key="x.id" class="color-box" v-bind:style="{backgroundColor: x.htmlColor}">
+                        <p v-on: click="updateProduct(index)">{{x.color}}</p>
+                    </div>-->
+                    <button v-on:click="addToCart()"
+                    v-bind:disabled="!onSale || disp==0"
+                    v-bind:class="{disabledButton: !onSale || disp==0}">Aggiungi al carrello</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="mascherina.js"></script>
+    </body>
+</html>
