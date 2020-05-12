@@ -15,9 +15,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
             function foo() {
-                var prima = window.sessionStorage.getItem("nomeUtente");
-                document.getElementById("barraBlu").innerHTML = "Benvenuto, " + prima + "!";
-                document.getElementById("usernameInNavbar").innerHTML = prima;
+                if( window.sessionStorage.getItem("nomeUtente")){
+                    var prima = window.sessionStorage.getItem("nomeUtente");
+                    document.getElementById("barraBlu").innerHTML = "Benvenuto, " + prima + "!";
+                   // document.getElementById("usernameInNavbar").innerHTML = prima;
+                }
+                else{
+                    var prima = window.sessionStorage.getItem("nomeUtente");
+                }
                 return true;
             }
         </script>
@@ -28,7 +33,7 @@
     <body style="background-color: #434547;" onload="return foo();">
         
         <div id="top">
-            <barratop></barratop>
+            <barratop v-bind:value="sessione"></barratop>
         </div>
 
         <!--############################# Fine navbar ################################-->
@@ -90,29 +95,7 @@
         <!--DA QUI PARE IL QUADRATO PREZZI-->
         <br>
         <div style="padding-top: 85px;"></div> <!--serve a riprodurre lo stesso spazio che c'è sotto-->
-        <!--
-        <div class="my_div" style="font-size:xx-large; background-color:chocolate; width: min-content;
-                     max-width: 100%; margin:auto; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!-auto centra orizzontalmente--
-            <b>I nostri prezzi </b> 
-        </div>-->
-        <!--
-        <div style="width: 50%; max-width: 1200px; margin:auto; ">
-            <div class="blocco my_div" style="width: 50%; font-size: xx-large; max-height: 250px;
-                    text-overflow: clip; overflow: hidden; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!-questa riga serve a non far sforare il testo--><!--
-                <u style="text-align: center; font-size: xx-large;">Settimanale</u>
-                <p style="font-size: x-large;"> Adulti:&nbsp; 7.50€</p>
-                <p style="font-size: x-large;"> Ridotto:&nbsp; 5.00€</p>
-                <p style="font-size: x-large;"> Università:&nbsp; 3.00€</p>
-            </div>
-            <div class="blocco my_div" style="width: 50%; font-size: xx-large; max-height: 250px;
-                    text-overflow: clip; overflow: hidden; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);">
-                <u style="text-align: center; font-size: xx-large;">Weekend</u>
-                <p style="font-size: x-large;"> Adulti:&nbsp; 9.50€</p>
-                <p style="font-size: x-large;"> Ridotto:&nbsp; 6.50€</p>
-                <p style="font-size: x-large;"> Università:&nbsp; 5.50€</p>
-            </div>
-        </div>
-        -->
+       
         <center>
         <div  class="table-responsive blocco"  style=" width:min-content; max-width: 100% ;min-width:40%  ;  margin:auto;  " >
             <table>

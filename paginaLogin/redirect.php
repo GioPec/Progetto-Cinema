@@ -11,6 +11,6 @@
         
         </body>";
 
-        header("Location: ../homepage.html");
+       //header("Location: ../homepage.html"); //PROBLEMA
     ?>
 </html>

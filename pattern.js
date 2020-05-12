@@ -1,6 +1,12 @@
 Vue.component('barratop',{
+    props:{
+        value:{
+            type: String,
+            required: true
+        }
+    },
     template:`
-    <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+    <nav  name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
         
             <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
           <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
@@ -40,8 +46,12 @@ Vue.component('barratop',{
                </ul>
                <!--creo la seconda unordered list per gli elementi a destra-->
                <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
-                   <li class="nav-item "style="padding-right: 15px;">
-                       <a id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
+                   <li id="top" class="nav-item "style="padding-right: 15px;">
+
+                       <a v-if="value == null " id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
+                           <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
+                       </a>
+                       <a v-else id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Ciao 
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
                        </a>
                    </li>
@@ -57,7 +67,10 @@ Vue.component('barratop',{
     `
 })
 var top=new Vue({
-    el: '#top',  
+    el: '#top',
+    data:{
+        sessione: window.sessionStorage.getItem("nomeUtente")
+    },
 });
 
 Vue.component('barrasotto',{
