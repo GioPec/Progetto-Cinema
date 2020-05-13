@@ -13,6 +13,11 @@ function sessionOK(coso) {
     return true;
 }
 
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 function goToHome(username) { 
     sessionStorage.setItem("nomeUtente", username);
+    return true;
 }
