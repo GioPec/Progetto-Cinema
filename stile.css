@@ -116,6 +116,7 @@ body { /*evita che la navbar vado a coprire parte del body*/
   padding: 12px 16px;
   z-index: 1;
 }
+
 .logout:hover .logout-content{
   display: block;
 }

@@ -4,7 +4,7 @@
     </head>
     <body>
         <?php
-            $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
+            $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
             or die('Could not connect: ' . pg_last_error());
             if(!(isset($_POST['registrationButton']))){
                 header("Location: ../homepage.html");
@@ -13,8 +13,8 @@
                 $q1="select * from utenti where email=$1";
                 $result=pg_query_params($dbconn, $q1, array($email));
                 if($line=pg_fetch_array($result, null, PGSQL_ASSOC)){
-                    echo "<h1> Sorry, you are already a registered user</h1>
-                    <a href=../paginaLogin/login.html> Click here to login </a>";
+                    echo "<h1> Sei gia registrato</h1>
+                    <a href=../paginaLogin/login.html> Clicca qui per il login </a>";
                 }else{
                     $nome=$_POST['inputName'];
                     $cognome=$_POST['inputSurname'];

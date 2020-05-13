@@ -52,13 +52,9 @@
             <div style="background-color: #2f3133; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); width: 90%; margin: auto;
                 height: 40%; white-space: nowrap; overflow-x: scroll;">
                 
-                    <img onclick="location.href='prossimamente.html#ancora'" v-for= "(x,index) in pellicola" :key="x.id" v-bind:src="locandinaFilm(x.id)" 
+                    <img onclick="location.href='prossimamente.html#ancora'" v-for= "(x,index) in pellicola" :key="x.id" v-bind:src="locandinaFilm(index)" 
                     v-on:click="updatePellicola(index)" width="13%" style="margin: 20px; margin-right: 9%;"/>
-                    <!--
-                    <div v-for= "(x,index) in variants" :key="x.id" class="color-box"
-                    v-bind:style="{ backgroundColor: x.htmlColor}">
-                        <p v-on:click="updateProduct(index)"> {{ x.color }} </p>
-                    </div>-->
+                   
             </div>
         </div>
 

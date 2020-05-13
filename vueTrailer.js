@@ -7,9 +7,14 @@ var film=new Vue({
                 trailer: 'https://www.youtube.com/embed/gZjQROMAh_s', locandina: "img/1917-playbill.jpg" },
             {id:1, titolo: 'Parasite', descrizione: 'Ki woo viene da una famiglia povera e, tuttavia, molto unita. Quando un suo amico gli propone di sostituirlo come tutore del figlio di un ricco magnate, il ragazzo riesce a procurare un lavoro anche alla sorella usando la propria arguzia.', 
                 trailer: 'https://www.youtube.com/embed/5xH0HfJHsaY', locandina: "img/parasite-playbill.jpg"},
-            {id:2, titolo: '1918', descrizione: 'film di guerra ma più peggio', trailer: 'https://www.youtube.com/embed/cWzIEz9wxBg', locandina: "img/1917-playbill.jpg"},
+            /*dovevo*/
+            {id:2, titolo: 'Don Matteo', descrizione: 'SPOLETO Secondo alcuni la migliore serie mai vista, girata in una città patrimonio Unesco',
+             trailer: 'https://www.youtube.com/embed/3gaHlLJVf3U', 
+             locandina: "https://lh3.googleusercontent.com/proxy/Uio-fMRP6qugc--GJ9YJLDM9yTy0O-e-rMiaRRNHKcIknKbmTgT69W5DrXqYwf49yB2TvOm8TuCbBciMI2oeqgNFAi1OKtENw8f5JgL7oHUIst0nUSOzT_iKgseqw5CGUlW165hyqyoqN0P2pK_s2FN_mgkxgBA"},
             {id:3, titolo: '1918', descrizione: 'film di guerra ma più peggio', trailer: 'https://www.youtube.com/embed/cWzIEz9wxBg', locandina: "img/1917-playbill.jpg"},
-            {id:4, titolo: '1918', descrizione: 'film di guerra ma più peggio', trailer: 'https://www.youtube.com/embed/cWzIEz9wxBg', locandina: "img/1917-playbill.jpg"},
+            {id:4, titolo: 'Don Matteo', descrizione: 'SPOLETO, Don Matteo è un viaggio nella vita e nella società di oggi con lo sguardo irriducibile di un uomo che crede nella possibilità di cambiare.',
+             trailer: 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FDonMatteoRai%2Fvideos%2F2539180252989434%2F&show_text=0&width=560',
+              locandina: "https://www.luxvide.it/wp-content/uploads/2018/01/800x1140_locandina_dm12-1.jpg"},
             {id:5, titolo: '1918', descrizione: 'film di guerra ma più peggio', trailer: 'https://www.youtube.com/embed/cWzIEz9wxBg', locandina: "img/1917-playbill.jpg"},
             {id:6, titolo: '1918', descrizione: 'film di guerra ma più peggio', trailer: 'https://www.youtube.com/embed/cWzIEz9wxBg', locandina: "img/1917-playbill.jpg"},
             {id:7, titolo: '1918', descrizione: 'film di guerra ma più peggio', trailer: 'https://www.youtube.com/embed/cWzIEz9wxBg', locandina: "img/1917-playbill.jpg"}
@@ -37,29 +42,4 @@ var film=new Vue({
             return this.pellicola[this.selectedVariant].descrizione;
         },
     }
-
-    /*methods:{
-        updateProduct: function(i){
-            this.selectedVariant=i;
-        },
-        addToCart: function(){
-            this.cart=this.cart+1;
-            this.variants[this.selectedVariant].disp=this.variants[this.selectedVariant].disp-1;
-        }
-    },
-
-    
-    computed:{
-        onSale: function() {
-            return this.variants[this.selectedVariant].onSale;
-        },
-        
-        disp: function() {
-            return this.variants[this.selectedVariant].disp;
-        },
-        
-        image: function() {
-            return this.variants[this.selectedVariant].image;
-        }
-    }*/
 });
