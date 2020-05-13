@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta http-equiv = "refresh" content = "1; url = ../homepage.html"/>    <!--reindirizzamento dopo 1s-->
+        <meta http-equiv = "refresh" content = "0.01; url = ../homepage.html"/>    <!--reindirizzamento dopo 1s-->
         <script type="text/javascript" lang="javascript" src="ScriptLog.js"></script>
     </head>
 
