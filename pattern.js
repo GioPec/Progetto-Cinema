@@ -6,7 +6,7 @@ Vue.component('barratop',{
         }
     },
     template:`
-    <nav  name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+    <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
         
             <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
           <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
@@ -15,7 +15,7 @@ Vue.component('barratop',{
                                                
            <div class="collapse navbar-collapse" id="collapse_target"><!--id deve essere uguale a data-target-->
            
-               <ul class="navbar-nav" >
+               <ul class="navbar-nav">
                    <li align="left">   <!--Uso semplicemente il tag <li> con dentro un <img> per il logo del cinema-->
                        <img onclick="location.href='homepage.html'" class=" iconahome " src="img/cmp2.png" height="70px"/>
                    </li>
@@ -28,13 +28,13 @@ Vue.component('barratop',{
                    </li>-->
                    <li class="nav-item" style="padding-right: 15px;">
                        <a class="nav-link" href="programmazione.html" style="color: white;">Programmazione
-                           <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
+                           <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-video-play.svg"/>
                        </a>
                    </li>
 
                    <li class="nav-item" style="padding-right: 15px;">
                        <a class="nav-link" href="prossimamente.html" style="color: white;">Prossimamente
-                           <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-cash.svg"/>
+                           <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
                        </a>
                    </li>
                    
@@ -51,8 +51,13 @@ Vue.component('barratop',{
                        <a v-if="value == null " id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
                        </a>
-                       <a v-else id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Ciao 
-                           <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
+                       <a v-else id="usernameInNavbar" class="nav-link logout" style="color: white;">{{ value }}
+                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-user.svg"/>
+                           <div class="logout-content">
+                           <button v-on:click="logoutFunction()" style="position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
+                                box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
+                                type="button" class="btn right button btn-primary btn-xs">Logout</button>
+                           <div>
                        </a>
                    </li>
                    <li class="nav-item ">
@@ -64,13 +69,31 @@ Vue.component('barratop',{
            
            </div>
         </nav>
-    `
+    `,
+    methods:{
+        logoutFunction: function(){
+            this.$emit('fai-logout');
+            /*this.variants[this.selectedVariant].disp=this.variants[this.selectedVariant].disp-1;*/
+        }
+    }
 })
+
+
+
+
 var top=new Vue({
     el: '#top',
     data:{
         sessione: window.sessionStorage.getItem("nomeUtente")
     },
+    
+    methods:{
+        updateLogin:function(){
+            window.sessionStorage.removeItem("nomeUtente");
+            location=location;
+            return true;
+        }
+    }
 });
 
 Vue.component('barrasotto',{

@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
             function foo() {
-                if( window.sessionStorage.getItem("nomeUtente")){
+                if(window.sessionStorage.getItem("nomeUtente")){
                     var prima = window.sessionStorage.getItem("nomeUtente");
-                    document.getElementById("barraBlu").innerHTML = "Benvenuto, " + prima + "!";
+                    document.getElementById("barraBlu").innerHTML = "<h1 style='color:white;'><strong>Benvenuto " + prima + "!</h1>";
                    // document.getElementById("usernameInNavbar").innerHTML = prima;
                 }
                 else{
@@ -33,7 +33,7 @@
     <body style="background-color: #434547;" onload="return foo();">
         
         <div id="top">
-            <barratop v-bind:value="sessione"></barratop>
+            <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin"></barratop>
         </div>
 
         <!--############################# Fine navbar ################################-->
@@ -87,9 +87,9 @@
         </div>
 
         <div style="padding-top: 85px;"></div> <!--serve a riprodurre lo stesso spazio che c'è sotto-->
-        <div class="my_div w-100" style="font-size:xx-large; background-color:#2676C0;
+        <div id="barraBlu" class="my_div w-100" style="font-size:xx-large; background-color:#2676C0;
                     margin:auto; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"> <!--auto centra orizzontalmente-->
-            <a href="paginaLogin/login.html"><h1 id="barraBlu" style="color:white;"><strong>Accedi </strong>o <strong>registrati</strong> per ottenere offerte esclusive ></h1> </a>
+            <a href="paginaLogin/login.html"><h1 style="color:white;"><strong>Accedi </strong>o <strong>registrati</strong> per ottenere offerte esclusive ></h1></a>
         </div>
         
         <!--DA QUI PARE IL QUADRATO PREZZI-->

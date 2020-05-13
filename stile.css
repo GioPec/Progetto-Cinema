@@ -103,6 +103,23 @@ body { /*evita che la navbar vado a coprire parte del body*/
   right: 0px;
 }
 
+.logout {
+  position: relative;
+  display: inline-block;
+}
+.logout-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  padding: 12px 16px;
+  z-index: 1;
+}
+.logout:hover .logout-content{
+  display: block;
+}
+
 
 /*.table-responsive {width: 50%;}
 
