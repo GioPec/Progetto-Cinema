@@ -7,6 +7,7 @@
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> <!--serve per il menu a tendina..-->
         <script src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script> <!--serve per il menu a tendina..-->
         <script type="text/javascript" src="Vue/vue.min.js"></script>
+        <script type="text/javascript" src="functions.js"></script>
         <link rel="icon" href="img/icona.ico"/> <!--Icona del sito-->
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
@@ -47,16 +48,14 @@
                     quando intraprendono una pericolosa missione per salvare 1.600 uomini da morte certa.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Martedì-Venerdì: 18:00, 21:00<br><br>
+                     Lunedì-Venerdì: 18:00, 21:00<br><br>
                     <strong>Sala 1</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="location.href='acquista.html'" style=" position: relative; margin-bottom: 10%; background-color:chocolate; 
-                            border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
+                        <button onclick="openForm()" style=" position: relative; margin-bottom: 10%; background-color:chocolate; 
+                            border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
                          type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
-                   
-                    </span>
-                    
+                    </span>                   
                 </div>
             </div>
         </div>
@@ -79,11 +78,11 @@
                         fortuna nell'industria cinematografica al tramonto dell'età dell'oro di Hollywood.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Martedì-Venerdì: 18:00, 21:00<br><br>
+                     Lunedì-Venerdì: 18:00, 21:00<br><br>
                     <strong>Sala 2</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="location.href='acquista.html'" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
+                        <button onclick="openForm()" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
                          type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
                    
                     </span>
@@ -110,11 +109,11 @@
                         chiedendogli di collaborare a fermare il malvagio Mysterio, intenzionato a devastare il continente.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Martedì-Venerdì: 18:00, 21:00<br><br>
+                     Lunedì-Venerdì: 18:00, 21:00<br><br>
                     <strong>Sala 3</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="location.href='acquista.html'" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
+                        <button onclick="openForm()" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
                             box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
                          type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
                    
@@ -148,20 +147,65 @@
                         elaborato al computer creato per tenere sotto controllo le persone. Morpheus potrebbe aiutarlo.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Martedì-Venerdì: 18:00, 21:00<br><br>
-                    <strong>Sala 3</strong>
+                     Sabato: 21:00<br><br>
+                    <strong>Sala 1</strong>
                     <br>
                     <span style="float:right">
                         <button onclick="location.href='acquista.html'" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
-                         type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
-                   
-                    </span>
-                    
+                         type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>                  
+                    </span>                   
                 </div>
             </div>
         </div>
 
         <br><br><br>
+
+        <!-- Popup -->
+        <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLongTitle" style="color: black;">Completa i campi per aggiungere al carrello</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label style="color: black;"><h5>Giorno</h5></label> &emsp;
+                                <select id="giorno">
+                                    <option value="" selected disabled hidden> Scegli un giorno </option>
+                                    <option value="lun"> Lunedì </option>
+                                    <option value="mar"> Martedì </option>
+                                    <option value="mer"> Mercoledì </option>
+                                </select><br><br>
+
+                                <label style="color: black;"><h5>Orario</h5></label> &emsp;
+                                <select id="orario">
+                                    <option value="" selected disabled hidden> Scegli un orario </option>
+                                    <option value="18"> 18:00 </option>
+                                    <option value="21"> 21:00 </option>
+                                </select><br><br>
+
+                                <label style="color: black;"><h5>Numero biglietti</h5></label> &emsp;
+                                <input type="number"><br><br>
+
+                                <input type="radio" id="studente" name="tipo" value="studente">
+                                <label for="studente" style="color: black;">Dichiaro di essere uno studente</label><br>
+                                <input type="radio" id="minorenne" name="tipo" value="minorenne">
+                                <label for="minorenne" style="color: black;">Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto</label><br>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+                <button type="button" class="btn btn-primary" onclick="inviaDati();" style="background-color:chocolate; border: none;">Invia al Carrello 🛒</button>
+                </div>
+            </div>
+            </div>
+        </div>
 
         <!--############################# Inizio footer ################################-->
         
