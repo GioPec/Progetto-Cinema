@@ -52,9 +52,9 @@
                     <strong>Sala 1</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="openForm()" style=" position: relative; margin-bottom: 10%; background-color:chocolate; 
+                        <button style=" position: relative; margin-bottom: 10%; background-color:chocolate; 
                             border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
-                         type="button" class="btn right button btn-primary btn-xs" onclick="return passaFilm('1917')">Aggiungi al Carrello 🛒</button>
+                         type="button" class="btn right button btn-primary btn-xs" onclick="return passaTitolo('1917');">Aggiungi al Carrello 🛒</button>
                     </span>                   
                 </div>
             </div>
@@ -82,7 +82,8 @@
                     <strong>Sala 2</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="openForm()" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
+                        <button onclick="passaTitolo('Once Upon a Time in Hollywood')" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
+                            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
                          type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
                    
                     </span>
@@ -113,8 +114,8 @@
                     <strong>Sala 3</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="openForm()" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
-                            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
+                        <button onclick="passaTitolo('Spider-Man: Far From Home')" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
+                            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
                          type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
                    
                     </span>
@@ -166,7 +167,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLongTitle" style="color: black;"><p>Completa i campi per aggiungere al carrello</p>
-                    <strong id="form_titolofilm">1917</strong> </h3>
+                    <strong id="form_titolofilm"></strong> </h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -178,13 +179,13 @@
                                 <label style="color: black;"><h5>Giorno</h5></label> &emsp;
                                 <select id="giorno" oninput="return calcolaPrezzo()">
                                     <option value="" selected disabled hidden> Scegli un giorno </option>
-                                    <option value="1"> Lunedì </option>
-                                    <option value="2"> Martedì </option>
-                                    <option value="3"> Mercoledì </option>
-                                    <option value="4"> Giovedì </option>
-                                    <option value="5"> Venerdì </option>
-                                    <option value="6"> Sabato </option>
-                                    <option value="7"> Domenica </option>
+                                    <option value="Lunedì"> Lunedì </option>
+                                    <option value="Martedì"> Martedì </option>
+                                    <option value="Mercoledì"> Mercoledì </option>
+                                    <option value="Giovedì"> Giovedì </option>
+                                    <option value="Venerdì"> Venerdì </option>
+                                    <option value="Sabato"> Sabato </option>
+                                    <option value="Domenica"> Domenica </option>
                                 </select><br><br>
 
                                 <label style="color: black;"><h5>Orario</h5></label> &emsp;
@@ -214,7 +215,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-                    <button type="button" class="btn btn-primary" onclick="inviaDati();" 
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="inviaDati();" 
                         style="background-color:chocolate; border: none;">Invia al Carrello 🛒</button>
                     
                 </div>

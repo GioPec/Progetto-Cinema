@@ -48,7 +48,7 @@ Vue.component('barratop',{
                <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
                    <li id="top" class="nav-item "style="padding-right: 15px;">
 
-                       <a v-if="value == null " id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
+                       <a v-if="value == null" id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
                        </a>
                        <a v-else id="usernameInNavbar" class="nav-link logout" style="color: white;">{{ value }}
@@ -61,8 +61,11 @@ Vue.component('barratop',{
                        </a>
                    </li>
                    <li class="nav-item ">
-                       <a class="nav-link"  href="carrello.html">  
+                       <a class="nav-link" v-if="value == null">  
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
+                       </a>
+                       <a class="nav-link" v-else href="carrello.html">  
+                       <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
                        </a>
                    </li>
                </ul>
