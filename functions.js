@@ -12,7 +12,7 @@ function mostraAcquisti() {
 
         //alert(ordineParsato);
         
-        list += ("<div class='container table-responsive' style='border: solid black 3px; height: 300px; margin: 30px; color: black; background-color: rgb(253, 231, 170);'>" + "<br><h1>" + ordineParsato.titoloFilm
+        list += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin: 30px; color: black; background-color: rgb(253, 231, 170);'>" + "<br><h1>" + ordineParsato.titoloFilm
             + "</h1><h3><br>Giorno: "+ordineParsato.giornoSelezionato +"<br>Orario: "+ ordineParsato.orarioSelezionato + ":00" +
             "<br>Numero biglietti: "+ordineParsato.n_biglietti + "<br>Importo: "+ ordineParsato.importo+"<br></h3></div>");
     }
