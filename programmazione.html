@@ -64,7 +64,7 @@
 
         <div class="container" style="background-image: url('img/hollywood.jpg'); box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); background-repeat:no-repeat; 
             background-size:cover; background-position-x:25%; position: relative">
-             <div class="filtro"></div>
+            <div class="filtro"></div>
             <div class="row"  style="position: relative; z-index: 1;">
                 <div class="col-lg">
                                                                 <!--per centrare orizzonatalmente serve questa riga-->
@@ -164,17 +164,17 @@
         <!-- Popup -->
         <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h3 class="modal-title" id="exampleModalLongTitle" style="color: black;"><p>Completa i campi per aggiungere al carrello</p>
-                    <strong id="form_titolofilm"></strong> </h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <form name="form_carrello" action="">
-                        <div class="form-group">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLongTitle" style="color: black;"><p>Completa i campi per aggiungere al carrello</p>
+                        <strong id="form_titolofilm"></strong> 
+                        </h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="form_carrello" action="">
                             <div class="form-group">
                                 <label style="color: black;"><h5>Giorno</h5></label> &emsp;
                                 <select id="giorno" oninput="return calcolaPrezzo()">
@@ -186,40 +186,45 @@
                                     <option value="Venerdì"> Venerdì </option>
                                     <option value="Sabato"> Sabato </option>
                                     <option value="Domenica"> Domenica </option>
-                                </select><br><br>
-
+                                </select>
+                                <br>
+                                <br>
                                 <label style="color: black;"><h5>Orario</h5></label> &emsp;
                                 <select id="orario">
                                     <option value="" selected disabled hidden> Scegli un orario </option>
                                     <option value="18"> 18:00 </option>
                                     <option value="21"> 21:00 </option>
-                                </select><br><br>
-
+                                </select>
+                                <br>
+                                <br>
                                 <label style="color: black;"><h5>Numero biglietti</h5></label> &emsp;
-                                <input id="num_biglietti"type="number" oninput="return calcolaPrezzo()" value="1"><br><br>
-
-                                
+                                <input id="num_biglietti"type="number" oninput="return calcolaPrezzo()" value="1">
+                                <br>
+                                <br>
                                 <input type="radio" id="studente" name="tipo" value="studente"  oninput="return calcolaPrezzo()">
                                 <label for="studente" style="color: black;">Dichiaro di essere uno studente</label><br>
                                 <input type="radio" id="minorenne" name="tipo" value="minorenne"  oninput="return calcolaPrezzo()">
                                 <label for="minorenne" style="color: black;">
-                                        Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto</label><br>
+                                    Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto
+                                </label>
+                                <br>
                                 <input type="radio" id="" name="tipo" value=""  oninput="return calcolaPrezzo()" checked>
-                                <label for="studente" style="color: black;">Nessuno dei due</label><br>
-                                <br><br>
+                                <label for="studente" style="color: black;">Nessuno dei due</label>
+                                <br>
+                                <br>
+                                <br>
                                 <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
-                                <label style="color: black;"><h4 id="importo">0€</h4></label>
-                                
-                        </div>
-                    </form>
+                                <label style="color: black;"><h4 id="importo">0€</h4></label>    
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="inviaDati();" 
+                            style="background-color:chocolate; border: none;">Invia al Carrello 🛒
+                        </button>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="inviaDati();" 
-                        style="background-color:chocolate; border: none;">Invia al Carrello 🛒</button>
-                    
-                </div>
-            </div>
             </div>
         </div>
 
