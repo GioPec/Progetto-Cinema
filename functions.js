@@ -27,7 +27,7 @@ function mostraAcquisti() {
         }
        
     document.getElementById("daRiempire").innerHTML = list;
-    document.getElementById("importo_tot").innerHTML = x+"€";
+    document.getElementById("importo_tot").innerHTML = x.toFixed(2)+"€";
     
     return true;
 }
