@@ -2,6 +2,7 @@ function mostraAcquisti() {
 
     var list = "";
     var i;
+    var x = 0;
     for (i = 0; i <= sessionStorage.length-2; i++) {
 
         var key = sessionStorage.key(i);
@@ -10,14 +11,23 @@ function mostraAcquisti() {
 
         var ordineParsato = JSON.parse(ordine);
 
-        //alert(ordineParsato);
-        
-        list += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin: 30px; color: black; background-color: rgb(253, 231, 170);'>" + "<br><h1>" + ordineParsato.titoloFilm
-            + "</h1><h3><br>Giorno: "+ordineParsato.giornoSelezionato +"<br>Orario: "+ ordineParsato.orarioSelezionato + ":00" +
-            "<br>Numero biglietti: "+ordineParsato.n_biglietti + "<br>Importo: "+ ordineParsato.importo+"<br></h3></div>");
-    }
 
+        //alert(ordineParsato);
+       
+        list += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin-top: 30px; color: black; background-color: rgb(253, 231, 170);'>" + "<br><h1>" + ordineParsato.titoloFilm
+            + "</h1><h3><br>Giorno: "+ordineParsato.giornoSelezionato +"<br>Orario: "+ ordineParsato.orarioSelezionato + ":00" +
+            "<br>Numero biglietti: "+ordineParsato.n_biglietti +"</h3>"+
+            //"<span name='prodotto'>Importo: "+ ordineParsato.importo+"</h3><h3>€</h3><br></div>");
+            "<span style='font-style: normal; font-size: x-large;'><strong  name='prodotto'>"+"Importo: " +ordineParsato.importo+"</strong></span>" +
+            "<span style='font-style: normal; font-size: x-large;'><strong>"+"€</strong></span>" +
+            "</div>");
+           x = parseFloat(ordineParsato.importo)+x;
+          
+          
+        }
+       
     document.getElementById("daRiempire").innerHTML = list;
+    document.getElementById("importo_tot").innerHTML = x+"€";
     
     return true;
 }
@@ -42,7 +52,7 @@ function inviaDati() {
 
     var num =  document.getElementById("num_biglietti").value;
     //controllo dati non vuoti
-    if (num<=0) { alert("Seleziona un numero positivo di biglietti!"); return; }
+    if (num<1) { alert("Seleziona un numero positivo di biglietti!"); return; }
 
     var costo =  document.getElementById("importo").innerHTML;
 
@@ -69,29 +79,29 @@ function calcolaPrezzo(){
       
         if(tipo=="studente"){
             var costo =(3.30*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo+"€";
+            document.getElementById("importo").innerHTML=costo;
         }
         else if(tipo=="minorenne"){
             var costo = (5.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo+"€";
+            document.getElementById("importo").innerHTML=costo;
         }
         else{
             var costo = (7.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo+"€";
+            document.getElementById("importo").innerHTML=costo;
         }
     }
     else{
         if(tipo=="studente"){
             var costo = (5.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo+"€";
+            document.getElementById("importo").innerHTML=costo;
         }
         else if(tipo=="minorenne"){
             var costo = (6.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo+"€";
+            document.getElementById("importo").innerHTML=costo;
         }
         else{
             var costo = (9.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo+"€";
+            document.getElementById("importo").innerHTML=costo;
         }
     }
 
@@ -102,3 +112,4 @@ function passaTitolo(titolo){
     document.getElementById('form_titolofilm').innerHTML=titolo;
     return true;
 }
+

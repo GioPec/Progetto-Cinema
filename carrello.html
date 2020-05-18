@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Cinema Marco Polo - Carrello</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script type="text/javascript" src="functions.js"></script>
+        <script type="text/javascript" src="Vue/vue.min.js"></script>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="stile.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
     </head>
 
     <body style="margin-top: -85px; background-color: #434547;" onload="return mostraAcquisti();">
@@ -12,25 +19,76 @@
 
         <h1 style="font-size: 70px; background-color: chocolate;"><strong>&emsp;&emsp;Il tuo carrello</strong></h1>
 
-        <table style="width: 100%;  margin: solid yellow 3px;">
-           <tr>
-               <td style="width: 40%; margin: 10px;">
-                     <div id="daRiempire" style=" margin: solid red 3px;">
+        
+          
+               
+            <div id="daRiempire" style="width: 50%; margin: auto;">
                      
-                     </div>  
-               </td>
-               <td style="width: 40%; max-width: 40%; left: 50%; position: fixed;">
-                    <div>
-                           <div  class = "container " style="background-color:rgb(253, 231, 170); height: 320px; 
-                                color: black; border: solid black 3px;">
-                            <br> 
-                                <h1>Recap Ordine</h1>
-                                <h3>Importo totale: 100 soldi</h3>
-                                
-                           </div>
-                    </div>  
-                </td> 
-           </tr>
-         </table>  
+            </div>  
+            <br><br>
+            <div class="my_div" style="background-color: chocolate; width: 80%; margin: auto;;">
+                    <h2><strong> Completa l'acquisto!!!</strong></h>
+            </div>
+            <br><br>
+            <!--<div style="width: 50%; margin: auto;">
+                <div class='container table-responsive' 
+                 style='border: solid black 3px; height: 320px; color: black; background-color: rgb(253, 231, 170);'>
+                    <br>
+                    <h1 style="margin-left: 30%;"><strong> Il tuo ordine</strong></h1>
+                    <br>
+                    <h2>Costo totale:</h2>
+                 </div>
+            </div>-->
+            <div class="form-group" style="width: 50%; margin: auto; background-color: rgb(253, 231, 170); border: solid black 3px">
+                <br>
+                <h1 align ="center" style="color: black;"><strong>Il tuo ordine</strong></h1>
+                <br>
+                <label style="color: black;"><h5>Seleziona il metodo di pagamento:</h5></label> &emsp;
+                <select id="giorno" oninput="return calcolaPrezzo()">
+                    <option value="" selected disabled hidden> Pago con... </option>
+                    <option value="Lunedì"> Lunedì </option>
+                    <option value="Martedì"> Martedì </option>
+                    <option value="Mercoledì"> Mercoledì </option>
+                    <option value="Giovedì"> Giovedì </option>
+                    <option value="Venerdì"> Venerdì </option>
+                    <option value="Sabato"> Sabato </option>
+                    <option value="Domenica"> Domenica </option>
+                </select>
+                <br>
+                <br>
+                <input type="radio" id="studente" name="tipo" value="studente"  oninput="return calcolaPrezzo()">
+                <label for="studente" style="color: black;">Dichiaro di essere uno studente</label><br>
+                <input type="radio" id="minorenne" name="tipo" value="minorenne"  oninput="return calcolaPrezzo()">
+                <label for="minorenne" style="color: black;">
+                    Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto
+                </label>
+                <br>
+                <input type="radio" id="" name="tipo" value=""  oninput="return calcolaPrezzo()" checked>
+                <label for="studente" style="color: black;">Nessuno dei due</label>
+                <br>
+                <br>
+                <br>
+                <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
+                <label style="color: black;"><h4 id="importo_tot"></h4></label> 
+                <div class="modal-footer">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"
+                        style="background-color:chocolate; border: none;"> Compra
+                    </button>
+                </div>  
+            </div>
+            
+        </form>
+       
+    </div>
+    <br><br><br>
+
+    <div id="sotto">
+        <barrasotto></barrasotto>
+    </div>        
+
+    <script type="text/javascript" src="pattern.js"></script>
+               
+                 
     </body>
 </html>
