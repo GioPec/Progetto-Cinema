@@ -49,12 +49,11 @@
 }
 
 .icona {
-   text-align: center;
-   padding: 1px 1px;
-   float: left;
-  /* https://codepen.io/sosuke/pen/Pjoqqp questo sito crea i colori se messi in imput come esadecimali*/  
-   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)
-  
+  text-align: center;
+  padding: 1px 1px;
+  float: left;
+  /* https://codepen.io/sosuke/pen/Pjoqqp questo sito crea i colori se messi in input come esadecimali*/  
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)
 }
 
 /*icona del logo del cinema*/

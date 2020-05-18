@@ -15,7 +15,7 @@
 
     <body style="margin-top: -85px; background-color: #434547;" onload="return mostraAcquisti();">
 
-        <h1 style="font-size: 100px; background-color: brown;"><strong>&emsp;Cinema Marco Polo</strong></h1>
+        <a href="homepage.html"><h1 style="font-size: 85px; background-color: brown; color: white;"><strong>&emsp;Cinema Marco Polo</strong></h1></a>
 
         <h1 style="font-size: 70px; background-color: chocolate;"><strong>&emsp;&emsp;Il tuo carrello</strong></h1>
 
@@ -27,51 +27,70 @@
             </div>  
             <br><br>
             <div class="my_div" style="background-color: chocolate; width: 80%; margin: auto;;">
-                    <h2><strong> Completa l'acquisto!!!</strong></h>
+                    <h2><strong>Completa l'acquisto</strong></h>
             </div>
+
             <br><br>
-            <!--<div style="width: 50%; margin: auto;">
-                <div class='container table-responsive' 
-                 style='border: solid black 3px; height: 320px; color: black; background-color: rgb(253, 231, 170);'>
-                    <br>
-                    <h1 style="margin-left: 30%;"><strong> Il tuo ordine</strong></h1>
-                    <br>
-                    <h2>Costo totale:</h2>
-                 </div>
-            </div>-->
+
             <div class="form-group" style="width: 50%; margin: auto; background-color: rgb(253, 231, 170); border: solid black 3px">
-                <br>
-                <h1 align ="center" style="color: black;"><strong>Il tuo ordine</strong></h1>
-                <br>
-                <label style="color: black;"><h5>Seleziona il metodo di pagamento:</h5></label> &emsp;
-                <select id="giorno" oninput="return calcolaPrezzo()">
-                    <option value="" selected disabled hidden> Pago con... </option>
-                    <option value="Lunedì"> Lunedì </option>
-                    <option value="Martedì"> Martedì </option>
-                    <option value="Mercoledì"> Mercoledì </option>
-                    <option value="Giovedì"> Giovedì </option>
-                    <option value="Venerdì"> Venerdì </option>
-                    <option value="Sabato"> Sabato </option>
-                    <option value="Domenica"> Domenica </option>
-                </select>
-                <br>
-                <br>
-                <input type="radio" id="studente" name="tipo" value="studente"  oninput="return calcolaPrezzo()">
-                <label for="studente" style="color: black;">Dichiaro di essere uno studente</label><br>
-                <input type="radio" id="minorenne" name="tipo" value="minorenne"  oninput="return calcolaPrezzo()">
-                <label for="minorenne" style="color: black;">
-                    Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto
-                </label>
-                <br>
-                <input type="radio" id="" name="tipo" value=""  oninput="return calcolaPrezzo()" checked>
-                <label for="studente" style="color: black;">Nessuno dei due</label>
-                <br>
-                <br>
-                <br>
-                <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
-                <label style="color: black;"><h4 id="importo_tot"></h4></label> 
+                <div style="margin-left: 15px;">
+                    <br>
+                    <h1 align ="center" style="color: black;"><strong>Il tuo ordine</strong></h1>
+                    <br>
+                    <label style="color: black;"><h5>Seleziona il metodo di pagamento:</h5></label> &emsp;
+                    <span>
+                        <select id="giorno" oninput="return calcolaPrezzo()">
+                            <option class="pagamento" value="" selected disabled hidden> Pago con... </option>
+                            <option class="pagamento" value="Visa"> Visa </option>
+                            <option class="pagamento" value="Mastercard"> Mastercard </option>
+                            <option class="pagamento" value="American_Express"> American_Express </option>
+                        </select>
+                        
+                    </span> &emsp; &emsp;
+                    <i class="fa fa-cc-mastercard" style="color: chocolate; font-size: 60px;"></i>
+                    <!--prova ajax inizio-->
+                    <span id="Zona dinamica">Ciao</span>
+                    <script>
+                        var documenti = document.getElementsByClassName("pagamento");
+                        for (var i = 0; i < documenti.length; i++) {
+                          documenti[i].onclick = caricaImg;
+                        }
+                  
+                        function caricaImg(e) {
+                          var httpRequest = new XMLHttpRequest();
+                          httpRequest.onreadystatechange = gestisciRisposta;
+                          httpRequest.open("GET",e.target.innerHTML, true);
+                          httpRequest.send();
+                        }
+                        
+                        function gestisciRisposta(e) {
+                          if (e.target.readyState == XMLHttpRequest.DONE &&
+                          e.target.status == 200) {
+                            document.getElementById("zonaDinamica").innerHTML
+                            = e.target.responseText;
+                          }
+                        }
+                    </script>
+
+
+                    <br>
+                    
+                    <label style="color: black;">Numero carta</label>
+                    <input type="text" size="16"><br>
+                    <label style="color: black;">Scadenza</label>
+                    <input type="text" size="5"><br>
+                    <label style="color: black;">CVV</label>
+                    <input type="text" size="3">
+                    <br>
+                    <input type="checkbox"><label style="color: black;">Ho letto e accetto i <a href="">termini e le condizioni d'uso</a></label>
+                    <br>
+                    <br>
+                    <br>
+                    <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
+                    <label style="color: black;"><h4 id="importo_tot"></h4></label> 
+                </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary"
+                    <button onclick="return compra();" type="button" class="btn btn-primary"
                         style="background-color:chocolate; border: none;"> Compra
                     </button>
                 </div>  

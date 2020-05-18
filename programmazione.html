@@ -54,7 +54,7 @@
                     quando intraprendono una pericolosa missione per salvare 1.600 uomini da morte certa.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Lunedì-Venerdì: 18:00, 21:00<br><br>
+                     Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 1</strong>
                     <br>
                     <span style="float:right">
@@ -84,7 +84,7 @@
                         fortuna nell'industria cinematografica al tramonto dell'età dell'oro di Hollywood.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Lunedì-Venerdì: 18:00, 21:00<br><br>
+                     Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 2</strong>
                     <br>
                     <span style="float:right">
@@ -116,7 +116,7 @@
                         chiedendogli di collaborare a fermare il malvagio Mysterio, intenzionato a devastare il continente.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Lunedì-Venerdì: 18:00, 21:00<br><br>
+                     Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 3</strong>
                     <br>
                     <span style="float:right">
@@ -154,12 +154,12 @@
                         elaborato al computer creato per tenere sotto controllo le persone. Morpheus potrebbe aiutarlo.
                     <br><br>
                     <u><strong>Orari:</strong></u>
-                     Sabato: 21:00<br><br>
-                    <strong>Sala 1</strong>
+                    Lunedì-Domenica: 18:00, 21:00<br><br>
+                    <strong>Sala 4</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="location.href='acquista.html'" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
-                         type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>                  
+                        <button onclick="passaTitolo('Matrix')" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
+                        data-toggle="modal" data-target="#selezione" type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>                  
                     </span>                   
                 </div>
             </div>
@@ -204,7 +204,17 @@
                                 <br>
                                 <br>
                                 <label style="color: black;"><h5>Numero biglietti</h5></label> &emsp;
-                                <input id="num_biglietti"type="number" oninput="return calcolaPrezzo()" value="1">
+                                <select id="num_biglietti" oninput="return calcolaPrezzo()">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
                                 <br>
                                 <br>
                                 <input type="radio" id="studente" name="tipo" value="studente"  oninput="return calcolaPrezzo()">

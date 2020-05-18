@@ -11,7 +11,6 @@ function mostraAcquisti() {
 
         var ordineParsato = JSON.parse(ordine);
 
-
         //alert(ordineParsato);
        
         list += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin-top: 30px; color: black; background-color: rgb(253, 231, 170);'>" + "<br><h1>" + ordineParsato.titoloFilm
@@ -22,8 +21,6 @@ function mostraAcquisti() {
             "<span style='font-style: normal; font-size: x-large;'><strong>"+"€</strong></span>" +
             "</div>");
            x = parseFloat(ordineParsato.importo)+x;
-          
-          
         }
        
     document.getElementById("daRiempire").innerHTML = list;
@@ -56,18 +53,18 @@ function inviaDati() {
 
     var costo =  document.getElementById("importo").innerHTML;
 
-    var oggetto = { titoloFilm: film, giornoSelezionato: day, orarioSelezionato: hour, n_biglietti: num, importo: costo };
-    var oggettoJSON = JSON.stringify(oggetto);
-
     var x = (sessionStorage.length + 1);   
     x = "ordine" + x;
     //alert(x);
 
+    var oggetto = { titoloFilm: film, giornoSelezionato: day, orarioSelezionato: hour, n_biglietti: num, importo: costo, indice: x };
+    var oggettoJSON = JSON.stringify(oggetto);
+
     sessionStorage.setItem(x, oggettoJSON);
 
-    //document.getElementById("carrello").
-
     alert("Aggiunto al carrello!");
+
+    location=location;
 }
 
 function calcolaPrezzo(){
@@ -110,6 +107,14 @@ function calcolaPrezzo(){
 
 function passaTitolo(titolo){
     document.getElementById('form_titolofilm').innerHTML=titolo;
+    return true;
+}
+
+function compra() {
+    for (i in sessionStorage) {
+        alert(sessionStorage[i].nome);
+        console.log(sessionStorage[i]);
+    }
     return true;
 }
 

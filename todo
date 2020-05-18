@@ -1,7 +1,14 @@
-- alert di avvenuta registrazione
-- cronologia acquisti (?)
-- biglietto pdf (?)
-- opacità bottoni onhover
+- togliere TUTTO codice che sappiamo :) (revisione)
+- togliere don matteo (?)
+- array di ordini in sessionStorage (array.push mette in fondo (e forse ritorna la nuova length))
+
+- remove film
 - form in contattaci
-- footer di programmazione
-- icona carrello pieno
+- opacità bottoni onhover
+- alert di avvenuta registrazione
+- cinema stelle 2
+- jquery
+
+- biglietto pdf (?)
+- cookie (?)
+- cronologia acquisti (?)
