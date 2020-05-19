@@ -1,12 +1,8 @@
 - togliere TUTTO codice che sappiamo :) (revisione)
-- togliere don matteo (?)
-- array di ordini in sessionStorage (array.push mette in fondo (e forse ritorna la nuova length))
 
+- carrello giallo
 - remove film
 - form in contattaci
-- opacità bottoni onhover
-- alert di avvenuta registrazione
-- cinema stelle 2
 - jquery
 
 - biglietto pdf (?)

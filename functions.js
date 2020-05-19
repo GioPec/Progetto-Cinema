@@ -1,30 +1,29 @@
+
+function rimuoviOrdine(indiceOrdine) {
+    alert(indiceOrdine);
+    location=location;
+    return true;
+}
+
 function mostraAcquisti() {
 
-    var list = "";
-    var i;
-    var x = 0;
-    for (i = 0; i <= sessionStorage.length-2; i++) {
-
-        var key = sessionStorage.key(i);
-
-        var ordine = sessionStorage.getItem(key);
-
-        var ordineParsato = JSON.parse(ordine);
-
-        //alert(ordineParsato);
+    var contenuto = "";
+    var laLista = JSON.parse(sessionStorage.getItem("listaOrdini"));
+    var tot=0;    //importo totale
+    for (i=0; i<laLista.length; i++) {
        
-        list += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin-top: 30px; color: black; background-color: rgb(253, 231, 170);'>" + "<br><h1>" + ordineParsato.titoloFilm
-            + "</h1><h3><br>Giorno: "+ordineParsato.giornoSelezionato +"<br>Orario: "+ ordineParsato.orarioSelezionato + ":00" +
-            "<br>Numero biglietti: "+ordineParsato.n_biglietti +"</h3>"+
-            //"<span name='prodotto'>Importo: "+ ordineParsato.importo+"</h3><h3>€</h3><br></div>");
-            "<span style='font-style: normal; font-size: x-large;'><strong  name='prodotto'>"+"Importo: " +ordineParsato.importo+"</strong></span>" +
-            "<span style='font-style: normal; font-size: x-large;'><strong>"+"€</strong></span>" +
-            "</div>");
-           x = parseFloat(ordineParsato.importo)+x;
+        contenuto += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin-top: 30px; color: black; background-color: rgb(253, 231, 170);'>" 
+        + "<br><span style='float: left;'><h1>" + laLista[i].titoloFilm + "</h1></span><span style='float: right;'><img name=" + laLista[i].indice + " onclick='return rimuoviOrdine(this.name);' src='/img/remove.png' width='30px'/></span><h3><br><br>Giorno: "
+        +laLista[i].giornoSelezionato +"<br>Orario: "+ laLista[i].orarioSelezionato + ":00" +
+        "<br>Numero biglietti: "+laLista[i].n_biglietti +"</h3>"+
+        "<span style='font-style: normal; font-size: x-large;'><strong  name='prodotto'>"+"Importo: " +laLista[i].importo+"</strong></span>" +
+        "<span style='font-style: normal; font-size: x-large;'><strong>"+"€</strong></span>" + "</div>");
+        tot = parseFloat(laLista[i].importo)+tot;
+
         }
        
-    document.getElementById("daRiempire").innerHTML = list;
-    document.getElementById("importo_tot").innerHTML = x.toFixed(2)+"€";
+    document.getElementById("daRiempire").innerHTML = contenuto;
+    document.getElementById("importo_tot").innerHTML = tot.toFixed(2)+"€";
     
     return true;
 }
@@ -53,18 +52,23 @@ function inviaDati() {
 
     var costo =  document.getElementById("importo").innerHTML;
 
-    var x = (sessionStorage.length + 1);   
-    x = "ordine" + x;
-    //alert(x);
+    var laLista = JSON.parse(sessionStorage.getItem("listaOrdini"));    //gli ordini finora
 
+    var x = (laLista.length + 1);   
+    x = "ordine" + x;   //nome nuovo ordine
+    
     var oggetto = { titoloFilm: film, giornoSelezionato: day, orarioSelezionato: hour, n_biglietti: num, importo: costo, indice: x };
-    var oggettoJSON = JSON.stringify(oggetto);
+    // creazione nuovo oggetto ordine
 
-    sessionStorage.setItem(x, oggettoJSON);
+    laLista.push(oggetto);
+
+    var laListaStringifata = JSON.stringify(laLista);   //stringifiamo la lista per poi riaggiungerla al sessionStorage
+
+    sessionStorage.setItem("listaOrdini", laListaStringifata);
 
     alert("Aggiunto al carrello!");
 
-    location=location;
+    location=location;  //per aggiornare l'icona carrello-full
 }
 
 function calcolaPrezzo(){
@@ -112,7 +116,6 @@ function passaTitolo(titolo){
 
 function compra() {
     for (i in sessionStorage) {
-        alert(sessionStorage[i].nome);
         console.log(sessionStorage[i]);
     }
     return true;

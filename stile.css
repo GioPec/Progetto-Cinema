@@ -69,6 +69,13 @@ body { /*evita che la navbar vado a coprire parte del body*/
   color: white;
 }
 
+body button {
+  opacity: 0.9;
+}
+body button:hover {
+  opacity: 1;
+}
+
 .sfondo { /*Questo per ora tiene sotto il footer anche senza immagine, ma dobbiamo risolvere*/
   height: 100%;
 }

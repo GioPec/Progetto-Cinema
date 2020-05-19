@@ -65,9 +65,9 @@ Vue.component('barratop',{
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
                        </a>
                        <a class="nav-link" v-else href="carrello.html">  
-                            <img class="navbar-brand icona" v-if="window.sessionStorage.length>1" style="filter: invert(89%) sepia(20%) saturate(6714%) hue-rotate(1deg) brightness(104%) contrast(109%);" src="mobiriseicons/30px/svg/mbri-cart-full.svg"/>
+                            <img class="navbar-brand icona" v-if="sessionStorage.length>2" style="filter: invert(89%) sepia(20%) saturate(6714%) hue-rotate(1deg) brightness(104%) contrast(109%);" src="mobiriseicons/30px/svg/mbri-cart-full.svg"/>
                             <img class="navbar-brand icona" v-else src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
-                       </a>
+                       </a>     <!--TODOOOOOOOOOOOOOOOOOO-->
                    </li>
                </ul>
            
@@ -79,7 +79,7 @@ Vue.component('barratop',{
             this.$emit('fai-logout');
             /*this.variants[this.selectedVariant].disp=this.variants[this.selectedVariant].disp-1;*/
         }
-    }
+    },
 })
 
 

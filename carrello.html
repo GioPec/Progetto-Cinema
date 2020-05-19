@@ -9,8 +9,7 @@
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="stile.css">
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     </head>
 
     <body style="margin-top: -85px; background-color: #434547;" onload="return mostraAcquisti();">
@@ -18,16 +17,15 @@
         <a href="homepage.html"><h1 style="font-size: 85px; background-color: brown; color: white;"><strong>&emsp;Cinema Marco Polo</strong></h1></a>
 
         <h1 style="font-size: 70px; background-color: chocolate;"><strong>&emsp;&emsp;Il tuo carrello</strong></h1>
-
-        
-          
-               
+  
             <div id="daRiempire" style="width: 50%; margin: auto;">
-                     
+               <!-- ordini qui -->      
             </div>  
+
             <br><br>
+
             <div class="my_div" style="background-color: chocolate; width: 80%; margin: auto;;">
-                    <h2><strong>Completa l'acquisto</strong></h>
+                <h2><strong>Completa l'acquisto</strong></h>
             </div>
 
             <br><br>
@@ -45,36 +43,10 @@
                             <option class="pagamento" value="Mastercard"> Mastercard </option>
                             <option class="pagamento" value="American_Express"> American_Express </option>
                         </select>
-                        
                     </span> &emsp; &emsp;
                     <i class="fa fa-cc-mastercard" style="color: chocolate; font-size: 60px;"></i>
-                    <!--prova ajax inizio-->
-                    <span id="Zona dinamica">Ciao</span>
-                    <script>
-                        var documenti = document.getElementsByClassName("pagamento");
-                        for (var i = 0; i < documenti.length; i++) {
-                          documenti[i].onclick = caricaImg;
-                        }
-                  
-                        function caricaImg(e) {
-                          var httpRequest = new XMLHttpRequest();
-                          httpRequest.onreadystatechange = gestisciRisposta;
-                          httpRequest.open("GET",e.target.innerHTML, true);
-                          httpRequest.send();
-                        }
-                        
-                        function gestisciRisposta(e) {
-                          if (e.target.readyState == XMLHttpRequest.DONE &&
-                          e.target.status == 200) {
-                            document.getElementById("zonaDinamica").innerHTML
-                            = e.target.responseText;
-                          }
-                        }
-                    </script>
-
-
                     <br>
-                    
+
                     <label style="color: black;">Numero carta</label>
                     <input type="text" size="16"><br>
                     <label style="color: black;">Scadenza</label>
@@ -94,10 +66,8 @@
                         style="background-color:chocolate; border: none;"> Compra
                     </button>
                 </div>  
-            </div>
-            
+            </div>  
         </form>
-       
     </div>
     <br><br><br>
 
@@ -106,7 +76,6 @@
     </div>        
 
     <script type="text/javascript" src="pattern.js"></script>
-               
-                 
+                       
     </body>
 </html>

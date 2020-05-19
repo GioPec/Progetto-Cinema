@@ -11,14 +11,13 @@ var film=new Vue({
                 trailer: 'https://www.youtube.com/embed/GxKcPDgzjIw', locandina: "img/odiolestate-playbill.jpg"},
             {id:3, titolo: 'Joker', descrizione: 'Arthur Fleck, attore comico fallito ed ignorato dalla società, vaga per le strade di Gotham City iniziando una lenta e progressiva discesa negli abissi della follia, sino a divenire una delle peggiori menti criminali della storia.', 
                 trailer: 'https://www.youtube.com/embed/o7nkJDjuSp4', locandina: "img/joker-playbill.jpg"},
-            {id:4, titolo: 'Don Matteo', descrizione: 'SPOLETO, Don Matteo è un viaggio nella vita e nella società di oggi con lo sguardo irriducibile di un uomo che crede nella possibilità di cambiare.',
-             trailer: 'https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FDonMatteoRai%2Fvideos%2F2539180252989434%2F&show_text=0&width=560',
-              locandina: "https://www.luxvide.it/wp-content/uploads/2018/01/800x1140_locandina_dm12-1.jpg"},
+            {id:4, titolo: 'In Time', descrizione: 'Per la rassegna I GRANDI CLASSICI: In un futuro non troppo lontano, il gene dell\'invecchiamento è stato isolato e sconfitto. Per evitare la sovrappopolazione, il tempo è diventato la moneta con cui la gente paga per acquistare i beni.',
+                trailer: 'https://www.youtube.com/embed/4D3rfKEBxuA', locandina: "img/intime-playbill.jpg"},
             {id:5, titolo: 'Avengers: Endgame', descrizione: 'Alla deriva nello spazio senza cibo o acqua, Tony Stark vede la propria scorta di ossigeno diminuire di minuto in minuto. Nel frattempo, i restanti Vendicatori affrontano un epico scontro con Thanos.', 
                 trailer: 'https://www.youtube.com/embed/TcMBFSGVi1c', locandina: "img/endgame-playbill.jpg"},
             {id:6, titolo: 'The Truman Show', descrizione: 'Per la rassegna I GRANDI CLASSICI: Truman Burbank scopre che i primi trent\'anni della propria vita non sono stati altro che una messinscena. Inizia così a desiderare di fuggire da una realtà alienante che però sembra essere stata costruita su misura per lui.',
                 trailer: 'https://www.youtube.com/embed/loTIzXAS7v4', locandina: "img/truman-playbill.jpg"},
-            {id:7, titolo: 'Il Buono, il Brutto, il Cattivo', descrizione: 'Mentre infuria la Guerra di Secessione, tre uomini dall\'oscuro passato si battono per impossessarsi di un tesoro nascosto in un cimitero.',
+            {id:7, titolo: 'Il Buono, il Brutto, il Cattivo', descrizione: 'Per la rassegna I GRANDI CLASSICI: Mentre infuria la Guerra di Secessione, tre uomini dall\'oscuro passato si battono per impossessarsi di un tesoro nascosto in un cimitero.',
                 trailer: 'https://www.youtube.com/embed/byCVQDkIMks', locandina: "img/buonobruttocattivo-playbill.jpg"}
         ]
 
