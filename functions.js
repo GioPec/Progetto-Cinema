@@ -1,6 +1,12 @@
 
 function rimuoviOrdine(indiceOrdine) {
-    alert(indiceOrdine);
+    var laLista = JSON.parse(sessionStorage.getItem("listaOrdini"));
+    for(i=0; i<laLista.length; ++i) {
+        if(indiceOrdine==laLista[i].indice) break;  //salvo l'indice del film da rimuovere
+    }
+    laLista.splice(i, 1);   //rimuovo l'ordine
+    var arrayJSON = JSON.stringify(laLista);
+    sessionStorage.setItem("listaOrdini", arrayJSON);   //aggiorno il sessionStorage
     location=location;
     return true;
 }
@@ -31,7 +37,6 @@ function mostraAcquisti() {
 function inviaDati() {
 
     //controllo accesso utente
-
     if (window.sessionStorage.getItem("nomeUtente")==null) { alert("Devi prima accedere per poter comprare dei biglietti!"); return; }
 
     var film = document.getElementById("form_titolofilm").innerHTML;
@@ -114,10 +119,26 @@ function passaTitolo(titolo){
     return true;
 }
 
-function compra() {
-    for (i in sessionStorage) {
-        console.log(sessionStorage[i]);
-    }
-    return true;
+function cambiaLogo() {
+    var ilMetodo = document.getElementById("metodoPagamento").value;
+    if (ilMetodo=="") document.getElementById("logo").innerHTML="";
+    else if (ilMetodo=="Visa") document.getElementById("logo").innerHTML="<i class='fa fa-cc-visa' style='color: chocolate; font-size: 60px;'></i></div>";
+    else if (ilMetodo=="Mastercard") document.getElementById("logo").innerHTML="<i class='fa fa-cc-mastercard' style='color: chocolate; font-size: 60px;'></i></div>";
+    else document.getElementById("logo").innerHTML="<i class='fa fa-cc-amex' style='color: chocolate; font-size: 60px;'></i></div>";
+}
+
+function controllaCompra() {
+    if(document.getElementById("metodoPagamento").value=="") { alert("Inserisci un metodo di pagamento!"); return false; }
+    if(document.getElementById("numeroCarta").value.length!=16) { alert("Inserisci un numero di carta corretto!"); return false; }
+    var pattern = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+    if(!(document.getElementById("scadenza").value.match(pattern))) { alert("Inserisci una data di scadenza corretta!"); return false; }
+    if(document.getElementById("cvv").value.length!=3) { alert("Inserisci un cvv corretto!"); return false; }
+    else { 
+        location="/homepage.html"; 
+        var arrayVuoto = new Array();
+        var arrayVuotoJSON = JSON.stringify(arrayVuoto);
+        sessionStorage.setItem("listaOrdini", arrayVuotoJSON);
+        return true;
+    }   
 }
 

@@ -37,22 +37,22 @@
                     <br>
                     <label style="color: black;"><h5>Seleziona il metodo di pagamento:</h5></label> &emsp;
                     <span>
-                        <select id="giorno" oninput="return calcolaPrezzo()">
+                        <select id="metodoPagamento" oninput="return cambiaLogo()">
                             <option class="pagamento" value="" selected disabled hidden> Pago con... </option>
                             <option class="pagamento" value="Visa"> Visa </option>
                             <option class="pagamento" value="Mastercard"> Mastercard </option>
-                            <option class="pagamento" value="American_Express"> American_Express </option>
+                            <option class="pagamento" value="American_Express"> American Express </option>
                         </select>
                     </span> &emsp; &emsp;
-                    <i class="fa fa-cc-mastercard" style="color: chocolate; font-size: 60px;"></i>
+                    <span id="logo"><!-- da riempire --></span>
                     <br>
 
                     <label style="color: black;">Numero carta</label>
-                    <input type="text" size="16"><br>
+                    <input id="numeroCarta" type="number" size="16"><br>
                     <label style="color: black;">Scadenza</label>
-                    <input type="text" size="5"><br>
+                    <input id="scadenza" type="text" size="5"><br>
                     <label style="color: black;">CVV</label>
-                    <input type="text" size="3">
+                    <input id="cvv" type="number" size="3">
                     <br>
                     <input type="checkbox"><label style="color: black;">Ho letto e accetto i <a href="">termini e le condizioni d'uso</a></label>
                     <br>
@@ -62,7 +62,7 @@
                     <label style="color: black;"><h4 id="importo_tot"></h4></label> 
                 </div>
                 <div class="modal-footer">
-                    <button onclick="return compra();" type="button" class="btn btn-primary"
+                    <button onclick="return controllaCompra();" type="button" class="btn btn-primary"
                         style="background-color:chocolate; border: none;"> Compra
                     </button>
                 </div>  
