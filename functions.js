@@ -128,16 +128,18 @@ function cambiaLogo() {
 }
 
 function controllaCompra() {
+    if(JSON.parse(sessionStorage.getItem("listaOrdini")).length==0) { alert("Aggiungi prima qualcosa nel carrello!"); location="/programmazione.html"; return false; }
     if(document.getElementById("metodoPagamento").value=="") { alert("Inserisci un metodo di pagamento!"); return false; }
     if(document.getElementById("numeroCarta").value.length!=16) { alert("Inserisci un numero di carta corretto!"); return false; }
     var pattern = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
     if(!(document.getElementById("scadenza").value.match(pattern))) { alert("Inserisci una data di scadenza corretta!"); return false; }
     if(document.getElementById("cvv").value.length!=3) { alert("Inserisci un cvv corretto!"); return false; }
     else { 
-        location="/homepage.html"; 
         var arrayVuoto = new Array();
         var arrayVuotoJSON = JSON.stringify(arrayVuoto);
         sessionStorage.setItem("listaOrdini", arrayVuotoJSON);
+        alert("Acquisto andato a buon fine!");
+        location="/homepage.html"; 
         return true;
     }   
 }

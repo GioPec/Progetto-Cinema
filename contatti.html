@@ -18,11 +18,8 @@
 
     <body style="background-color: #434547;">
 
-        <!--<div id="top">
-            <barratop></barratop>
-        </div>-->
         <div id="top">
-            <barratop v-bind:value="sessione"  v-on:fai-logout="updateLogin"></barratop>
+            <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
         </div>
 
         <!--############################# Fine navbar ################################-->
@@ -53,13 +50,27 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.8315172882!2d12.518717715700044!3d41.89648037224221!2m3!1f0!2f0!3f0!3m2!1i1024!
                     2i768!4f13.1!3m3!1m2!1s0x132f6184fe1c2b31%3A0x9e480ba3e76e73a9!2sSapienza%20Universit%C3%A0%20di%20Roma%20-%20Ex-Poste!5e0!3m2!1sit!2sit!4v1588327793469!5m2!1sit!2sit"
                     width="100%" height="500px" marginheight="0" marginwidth="0"></iframe>
-                </div>
-
-                
+                </div>  
             </div>
         </div>
 
         <br><br>
+
+        <div align="center" style="margin-bottom: 80px;">
+            <h1 style="font-size: 250%;"><strong>Facci sapere la tua</strong></h1>
+            <br>
+            <form action="contatti.php">
+                
+                <label>La tua opinione è importante per noi. Raccontaci della tua esperienza al Cinema Marco Polo:</label><br>
+                <!--<label>Nome</label>
+                <input id="nomeUtenteMessaggio" type="text" value="lalala"><br><br>-->
+
+                <!-- stelline? rangebar? -->
+
+                <div style="width: 50%;"><textarea name="ilMessaggio" maxlength="500" class="form-control" rows="10" style="resize: none;"></textarea></div><br>
+                <button name="contattiButton" type="submit" class="btn right button btn-primary">Invia</button>
+            </form>
+        </div>
 
         <!--############################# Inizio footer ################################-->
         

@@ -64,10 +64,9 @@ Vue.component('barratop',{
                        <a class="nav-link" v-if="value == null">  
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
                        </a>
-                       <a class="nav-link" v-else href="carrello.html">  
-                            <img class="navbar-brand icona" v-if="false" style="filter: invert(89%) sepia(20%) saturate(6714%) hue-rotate(1deg) brightness(104%) contrast(109%);" src="mobiriseicons/30px/svg/mbri-cart-full.svg"/>
-                            <img class="navbar-brand icona" v-else src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
-                       </a>     <!--TODOOOOOOOOOOOOOOOOOO-->
+                       <a id="iconaCarrello" class="nav-link" v-else href="carrello.html">  
+                            <img class="navbar-brand icona" v-on:load="cambiaCarrello()" src="mobiriseicons/30px/svg/mbri-shopping-cart.svg"/>
+                       </a>
                    </li>
                </ul>
            
@@ -78,6 +77,9 @@ Vue.component('barratop',{
         logoutFunction: function(){
             this.$emit('fai-logout');
             /*this.variants[this.selectedVariant].disp=this.variants[this.selectedVariant].disp-1;*/
+        },
+        cambiaCarrello: function(){
+            this.$emit('cambia-carrello');
         }
     },
 })
@@ -92,11 +94,18 @@ var top=new Vue({
     },
     
     methods:{
-        updateLogin:function(){
+        updateLogin: function(){
             //window.sessionStorage.removeItem("nomeUtente");
             sessionStorage.clear();
             location=location;
             return true;
+        },
+        updateCarrello: function(){
+            if(JSON.parse(sessionStorage.getItem("listaOrdini")).length>0) {
+                document.getElementById("iconaCarrello").innerHTML="<img class='navbar-brand icona' v-on:load='cambiaCarrello()' "+
+                "style='filter: invert(89%) sepia(20%) saturate(6714%) hue-rotate(1deg) brightness(104%) contrast(109%);'"+
+                "src='mobiriseicons/30px/svg/mbri-cart-full.svg'/>";
+            }
         }
     }
 });

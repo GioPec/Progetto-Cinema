@@ -14,14 +14,13 @@
         <link rel="stylesheet" type="text/css" href="stile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
-            function foo() {
+            function cambiaBarraBlu() {
                 if(window.sessionStorage.getItem("nomeUtente")){
-                    var prima = window.sessionStorage.getItem("nomeUtente");
-                    document.getElementById("barraBlu").innerHTML = "<h1 style='color:white;'><strong>Benvenuto " + prima + "!</h1>";
-                   // document.getElementById("usernameInNavbar").innerHTML = prima;
+                    var nome = window.sessionStorage.getItem("nomeUtente");
+                    document.getElementById("barraBlu").innerHTML = "<h1 style='color:white;'><strong>Benvenuto " + nome + "!</h1>";
                 }
                 else{
-                    var prima = window.sessionStorage.getItem("nomeUtente");
+                    var nome = window.sessionStorage.getItem("nomeUtente");
                 }
                 return true;
             }
@@ -30,17 +29,16 @@
     
     </head>
 
-    <body style="background-color: #434547;" onload="return foo();">
+    <body style="background-color: #434547;" onload="return cambiaBarraBlu();">
         
         <div id="top">
-            <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin"></barratop>
+            <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
         </div>
 
         <!--############################# Fine navbar ################################-->
         
         
         <div class="sfondo img-fluid">
-            <!--<img src="cinema-stelle.jpg" class="img-fluid"> con questa classe adatto la foto ai ridimensionamenti-->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
