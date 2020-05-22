@@ -39,7 +39,7 @@ Vue.component('barratop',{
                    </li>
                    
                    <li class="nav-item" style="padding-right: 15px;">
-                       <a class="nav-link" href="contatti.html" style="color: white;">Contatti
+                       <a class="nav-link" href="contatti.php" style="color: white;">Contatti
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-edit.svg"/>
                        </a>
                    </li>

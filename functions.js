@@ -158,7 +158,7 @@ function controllaCompra() {
 function cambiaAction() {
     var nome = sessionStorage.getItem("nomeUtente");
     if(nome!=null) {
-        var destinazione = "/contatti.php?name=" + nome;
+        var destinazione = "/invia.php?name=" + nome;
         document.getElementById("form").action = destinazione;
     }
     else document.getElementById("ilBottone").disabled=true;
