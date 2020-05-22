@@ -1,4 +1,15 @@
 
+function cambiaBarraBlu() {
+    if(window.sessionStorage.getItem("nomeUtente")){
+        var nome = window.sessionStorage.getItem("nomeUtente");
+        document.getElementById("barraBlu").innerHTML = "<h1 style='color:white;'><strong>Benvenuto " + nome + "!</h1>";
+    }
+    else{
+        var nome = window.sessionStorage.getItem("nomeUtente");
+    }
+    return true;
+}
+
 function rimuoviOrdine(indiceOrdine) {
     var laLista = JSON.parse(sessionStorage.getItem("listaOrdini"));
     for(i=0; i<laLista.length; ++i) {
@@ -19,7 +30,7 @@ function mostraAcquisti() {
     for (i=0; i<laLista.length; i++) {
        
         contenuto += ("<div class='container table-responsive' style='border: solid black 3px; height: 320px; margin-top: 30px; color: black; background-color: rgb(253, 231, 170);'>" 
-        + "<br><span style='float: left;'><h1>" + laLista[i].titoloFilm + "</h1></span><span style='float: right;'><img name=" + laLista[i].indice + " onclick='return rimuoviOrdine(this.name);' src='/img/remove.png' width='30px'/></span><h3><br><br>Giorno: "
+        + "<br><span style='float: left;'><h1>" + laLista[i].titoloFilm + "</h1></span><span style='float: right;'><img name=" + laLista[i].indice + " onclick='return rimuoviOrdine(this.name);' src='/img/remove.png' style='cursor: pointer;' width='30px'/></span><h3><br><br>Giorno: "
         +laLista[i].giornoSelezionato +"<br>Orario: "+ laLista[i].orarioSelezionato + ":00" +
         "<br>Numero biglietti: "+laLista[i].n_biglietti +"</h3>"+
         "<span style='font-style: normal; font-size: x-large;'><strong  name='prodotto'>"+"Importo: " +laLista[i].importo+"</strong></span>" +
@@ -144,3 +155,16 @@ function controllaCompra() {
     }   
 }
 
+function cambiaAction() {
+    var nome = sessionStorage.getItem("nomeUtente");
+    if(nome!=null) {
+        var destinazione = "/contatti.php?name=" + nome;
+        document.getElementById("form").action = destinazione;
+    }
+    else document.getElementById("ilBottone").disabled=true;
+    return true;
+}
+
+function cambiaBarra() {
+    document.getElementById("valore").innerHTML = document.getElementById("barra").value;
+}
