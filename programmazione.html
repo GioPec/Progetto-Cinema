@@ -161,7 +161,7 @@
                         <form name="form_carrello">
                             <div class="form-group">
                                 <label style="color: black;"><h5>Giorno</h5></label> &emsp;
-                                <select id="giorno" oninput="return calcolaPrezzo()">
+                                <select id="giorno" onchange="return calcolaPrezzo()">
                                     <option value="" selected disabled hidden> Scegli un giorno </option>
                                     <option value="Lunedì"> Lunedì </option>
                                     <option value="Martedì"> Martedì </option>
@@ -182,7 +182,7 @@
                                 <br>
                                 <br>
                                 <label style="color: black;"><h5>Numero biglietti</h5></label> &emsp;
-                                <select id="num_biglietti" oninput="return calcolaPrezzo()">
+                                <select id="num_biglietti" onchange="return calcolaPrezzo()">
                                     <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -195,14 +195,14 @@
                                 </select>
                                 <br>
                                 <br>
-                                <input type="radio" id="studente" name="tipo" value="studente"  oninput="return calcolaPrezzo()">
+                                <input type="radio" id="studente" name="tipo" value="studente"  onchange="return calcolaPrezzo()">
                                 <label for="studente" style="color: black;">Dichiaro di essere uno studente</label><br>
-                                <input type="radio" id="minorenne" name="tipo" value="minorenne"  oninput="return calcolaPrezzo()">
+                                <input type="radio" id="minorenne" name="tipo" value="minorenne"  onchange="return calcolaPrezzo()">
                                 <label for="minorenne" style="color: black;">
                                     Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto
                                 </label>
                                 <br>
-                                <input type="radio" id="" name="tipo" value=""  oninput="return calcolaPrezzo()" checked>
+                                <input type="radio" id="" name="tipo" value=""  onchange="return calcolaPrezzo()" checked>
                                 <label for="studente" style="color: black;">Nessuno dei due</label>
                                 <br>
                                 <br>

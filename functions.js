@@ -95,21 +95,7 @@ function calcolaPrezzo(){
     if((giorno == "Sabato") || (giorno=="Domenica")){
       
         if(tipo=="studente"){
-            var costo =(3.30*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo;
-        }
-        else if(tipo=="minorenne"){
-            var costo = (5.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo;
-        }
-        else{
-            var costo = (7.50*n).toFixed(2);
-            document.getElementById("importo").innerHTML=costo;
-        }
-    }
-    else{
-        if(tipo=="studente"){
-            var costo = (5.50*n).toFixed(2);
+            var costo =(5.50*n).toFixed(2);
             document.getElementById("importo").innerHTML=costo;
         }
         else if(tipo=="minorenne"){
@@ -118,6 +104,20 @@ function calcolaPrezzo(){
         }
         else{
             var costo = (9.50*n).toFixed(2);
+            document.getElementById("importo").innerHTML=costo;
+        }
+    }
+    else{
+        if(tipo=="studente"){
+            var costo = (3.30*n).toFixed(2);
+            document.getElementById("importo").innerHTML=costo;
+        }
+        else if(tipo=="minorenne"){
+            var costo = (5.00*n).toFixed(2);
+            document.getElementById("importo").innerHTML=costo;
+        }
+        else{
+            var costo = (7.50*n).toFixed(2);
             document.getElementById("importo").innerHTML=costo;
         }
     }
