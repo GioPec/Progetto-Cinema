@@ -19,13 +19,6 @@ Vue.component('barratop',{
                    <li align="left">   <!--Uso semplicemente il tag <li> con dentro un <img> per il logo del cinema-->
                        <img onclick="location.href='homepage.html'" class=" iconahome " src="img/cmp2.png" height="70px"/>
                    </li>
-                   <!--
-                   <li class="nav-item" style="padding-right: 15px;">
-                       <a class="nav-link" href="homepage.html" style="color: white;" >
-                       <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-home.svg"/>-->
-                       <!--<img class="navbar-brand iconahome" src="img/cmp2.png" height="50px" style=" text-align: center;"/>--><!--
-                       </a>
-                   </li>-->
                    <li class="nav-item" style="padding-right: 15px;">
                        <a class="nav-link" href="programmazione.html" style="color: white;">Programmazione
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-video-play.svg"/>

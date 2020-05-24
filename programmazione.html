@@ -15,12 +15,6 @@
         <link rel="stylesheet" type="text/css" href="stile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <script>
-            function importoTotale(){
-                
-            }
-        </script>
-    
     </head>
 
     <body style="background-color: #434547;">
@@ -29,20 +23,17 @@
             <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
         </div>
 
-        <!--############################# Fine navbar ################################-->
+        <!-- Fine navbar -->
 
         <div align="center" style="padding-top: 70px; padding-bottom: 70px;">
             <h1 style="font-size: 400%;"><strong>Nelle sale</strong></h1>
         </div>
         
-        <div class="container" style="background-image: url('img/1917.jpeg'); box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); background-repeat:no-repeat; 
-            background-size:cover; background-position-x:25%; position: relative;">
+        <div class="container sfondoLocandina" style="background-image: url('img/1917.jpeg');">
             <div class="filtro"></div>
             <div class="row" style="position: relative; z-index: 1;">
                 <div class="col-lg">
-                                                                <!--per centrare orizzonatalmente serve questa riga-->
-                    <img src="img/1917-playbill.jpg" width="43%"  style="margin-left: auto; margin-right: auto; display:table-cell;
-                     padding: 40px 0; text-align: center;" ></img> <!--per centrare verticalmente serve questa riga-->
+                    <img src="img/1917-playbill.jpg" width="43%" class="locandina"></img>
                 </div>
                 <div class="col-xl-8">
                     <br>
@@ -65,14 +56,11 @@
 
         <br><br><br>
 
-        <div class="container" style="background-image: url('img/hollywood.jpg'); box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); background-repeat:no-repeat; 
-            background-size:cover; background-position-x:25%; position: relative">
+        <div class="container sfondoLocandina" style="background-image: url('img/hollywood.jpg');">
             <div class="filtro"></div>
             <div class="row"  style="position: relative; z-index: 1;">
                 <div class="col-lg">
-                                                                <!--per centrare orizzonatalmente serve questa riga-->
-                    <img src="img/hollywood-playbill.jpg" width="47%"  style="margin-left: auto; margin-right: auto; display:table-cell;
-                     padding: 40px 0; text-align: center;" ></img> <!--per centrare verticalmente serve questa riga-->
+                    <img src="img/hollywood-playbill.jpg" width="47%" class="locandina"></img>
                 </div>
                 <div class="col-xl-8">
                     <br>
@@ -97,14 +85,11 @@
 
         <br><br><br>
 
-        <div class="container" style="background-image: url('img/spiderman.jpg'); box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); background-repeat:no-repeat; 
-            background-size:cover; background-position-x:25%; position: relative;">
+        <div class="container sfondoLocandina" style="background-image: url('img/spiderman.jpg');">
              <div class="filtro"></div>
             <div class="row"  style="position: relative; z-index: 1;">
                 <div class="col-lg">
-                                                                <!--per centrare orizzonatalmente serve questa riga-->
-                    <img src="img/spiderman-playbill.jpg" width="47%"  style="margin-left: auto; margin-right: auto; display:table-cell;
-                     padding: 40px 0; text-align: center;" ></img> <!--per centrare verticalmente serve questa riga-->
+                    <img src="img/spiderman-playbill.jpg" width="47%" class="locandina"></img>
                 </div>
                 <div class="col-xl-8">
                     <br>
@@ -130,19 +115,16 @@
         <br><br><br>
 
         
-        <div class="container" style="background-image: url('img/matrix.jpg'); box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); background-repeat:no-repeat; 
-            background-size:cover; background-position-x:25%; position: relative;">
+        <div class="container sfondoLocandina" style="background-image: url('img/matrix.jpg');">
              <div class="filtro"></div>
 
-            <div style="background-color: brown; text-align: center; padding: 10px; position: relative; z-index: 1; width: 100%;"> <!--auto centra orizzontalmente-->
+            <div style="background-color: brown; text-align: center; padding: 10px; position: relative; z-index: 1; width: 100%;">
                 <h2>Per la rassegna: <strong>i grandi classici</strong></h2>
             </div>
 
             <div class="row" style="position: relative; z-index: 1;">
                 <div class="col-lg">
-                                                                <!--per centrare orizzonatalmente serve questa riga-->
-                    <img src="img/matrix-playbill.jpg" width="47%"  style="margin-left: auto; margin-right: auto; display:table-cell;
-                     padding: 40px 0; text-align: center;" ></img> <!--per centrare verticalmente serve questa riga-->
+                    <img src="img/matrix-playbill.jpg" width="47%" class="locandina"></img>
                 </div>
                 <div class="col-xl-8">
                     <br>
@@ -165,19 +147,18 @@
         <br><br><br>
 
         <!-- Popup -->
-        <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+        <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="modal-title" id="exampleModalLongTitle" style="color: black;"><p>Completa i campi per aggiungere al carrello</p>
                         <strong id="form_titolofilm"></strong> 
                         </h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
+                        <button type="button" class="close" data-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <form name="form_carrello" action="">
+                        <form name="form_carrello">
                             <div class="form-group">
                                 <label style="color: black;"><h5>Giorno</h5></label> &emsp;
                                 <select id="giorno" oninput="return calcolaPrezzo()">
@@ -229,8 +210,8 @@
                                 <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
                                 <label style="color: black;">
                                     <span style="font-style: normal; font-size: x-large;"><strong id="importo">0</strong></span>
-                                    <span  style="font-style: normal; font-size: x-large;"><strong>€</strong></span>
-                                </label>    
+                                    <span style="font-style: normal; font-size: x-large;"><strong>€</strong></span>
+                                </label>
                             </div>
                         </form>
                     </div>
@@ -244,13 +225,12 @@
             </div>
         </div>
 
-        <!--############################# Inizio footer ################################-->
+        <!-- Inizio footer -->
         
         <div id="sotto">
             <barrasotto></barrasotto>
         </div>        
 
         <script type="text/javascript" src="pattern.js"></script>
-
     </body>
 </html>

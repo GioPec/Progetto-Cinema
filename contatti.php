@@ -11,10 +11,9 @@
         <link rel="icon" href="img/icona.ico" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)"/> <!--Icona del sito-->
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
-        <link rel="stylesheet" type="text/css" href="mobiriseicons/30px/mobirise/style.css">
+        <link rel="stylesheet" type="text/css" href="bobiriseicons/30px/mobirise/style.css">
         <link rel="stylesheet" type="text/css" href="stile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
     </head>
 
     <body onload="return cambiaAction();" style="background-color: #434547;">

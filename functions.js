@@ -73,8 +73,8 @@ function inviaDati() {
     var x = (laLista.length + 1);   
     x = "ordine" + x;   //nome nuovo ordine
     
-    var oggetto = { titoloFilm: film, giornoSelezionato: day, orarioSelezionato: hour, n_biglietti: num, importo: costo, indice: x };
     // creazione nuovo oggetto ordine
+    var oggetto = { titoloFilm: film, giornoSelezionato: day, orarioSelezionato: hour, n_biglietti: num, importo: costo, indice: x };
 
     laLista.push(oggetto);
 
@@ -84,7 +84,7 @@ function inviaDati() {
 
     alert("Aggiunto al carrello!");
 
-    location=location;  //per aggiornare l'icona carrello-full
+    location=location;  //per aggiornare l'icona cart-full
 }
 
 function calcolaPrezzo(){
@@ -121,7 +121,6 @@ function calcolaPrezzo(){
             document.getElementById("importo").innerHTML=costo;
         }
     }
-
     return true;
 }
 
