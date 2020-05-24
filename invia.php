@@ -1,7 +1,6 @@
 <html>
     <head>
     <script type="text/javascript" lang="javascript" src=""></script>
-    <script type="text/javascript" lang="javascript"> var boh = "ciao"; </script>
     </head>
     <body>
         <?php

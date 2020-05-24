@@ -159,7 +159,7 @@ function cambiaAction() {
     var nome = sessionStorage.getItem("nomeUtente");
     if(nome!=null) {
         var destinazione = "/invia.php?name=" + nome;
-        document.getElementById("form").action = destinazione;
+        document.getElementById("form").action = destinazione;  //(contatti.php, riga 63)
     }
     else document.getElementById("ilBottone").disabled=true;
     return true;
