@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body style="background-color: #434547;">
+    <body">
 
         <div id="top">
             <barratop v-bind:value="sessione"  v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
@@ -33,8 +33,8 @@
             <div class="container"> 
                 <div class="row">
                     <div class="col-xl-8">
-                        <iframe width="100%" height="400px" v-bind:src="trailer" style="border: solid chocolate 12px"
-                        frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="400px" v-bind:src="trailerFilm" style="border: solid chocolate 12px"
+                        frameborder="1" allowfullscreen></iframe>
                     </div>
         
                     <div class="col-lg">
@@ -52,7 +52,7 @@
             <div style="background-color: #2f3133; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); width: 90%; margin: auto;
                 height: 40%; white-space: nowrap; overflow-x: scroll;">
                 
-                    <img onclick="location.href='prossimamente.html#ancora'" v-for= "(x,index) in pellicola" :key="x.id" v-bind:src="locandinaFilm(index)" 
+                    <img v-for="(x,index) in pellicola" v-bind:src="locandinaFilm(index)" 
                     v-on:click="updatePellicola(index)" width="13%" style="margin: 20px; margin-right: 9%;"/>
                    
             </div>

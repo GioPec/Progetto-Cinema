@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Importa monserrat, font utilizzato in tutto il sito */
 
-body { /*evita che la navbar vado a coprire parte del body*/
+body {
   padding-top: 85px;
   font-family: "montserrat";
   color: white;
+  background-color: #434547;
 }
 
 body button {
@@ -14,7 +15,6 @@ body button:hover {
   opacity: 1;
 }
 
-/* Link all'interno della topnav */
 .navbar a {
   font-family: "montserrat";
   float: left;
@@ -50,7 +50,7 @@ body button:hover {
   text-align: center;
   padding: 1px 1px;
   float: left;
-  /* https://codepen.io/sosuke/pen/Pjoqqp questo sito crea i colori se messi in input come esadecimali*/  
+  /* https://codepen.io/sosuke/pen/Pjoqqp */  
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)
 }
 
@@ -59,10 +59,22 @@ body button:hover {
   padding-right: 15px; 
 }
 
-.blocco {
- /* border: 1px solid red;*/
+.tabella {
   background-color: #2676c0;
   float: center;
+  width: 650px;
+  max-width: 100%;
+  margin:auto;
+}
+
+.tabella table td, .tabella table th {
+  min-width: 50px;
+  width: 24%;
+  border: none;
+  word-break: keep-all;
+  text-align: center;
+  padding: 1%;
+  font-size: x-large;
 }
 
 .locandina {
@@ -92,6 +104,15 @@ body button:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 }
 
+.bottone {
+  position: relative;
+  margin-bottom: 10%;
+  background-color:chocolate; 
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+  color: white;
+}
+
 .filtro{
   background: #000;
   height: 100%;
@@ -102,6 +123,8 @@ body button:hover {
   right: 0px;
 }
 
+/* --------------------------------------------------------------------- */
+
 .logout {
   position: relative;
   display: inline-block;
@@ -111,7 +134,6 @@ body button:hover {
   position: absolute;
   background-color: transparent;
   min-width: 160px;
-  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
   padding: 12px 16px;
   z-index: 1;
 }
@@ -120,21 +142,7 @@ body button:hover {
   display: block;
 }
 
-
-/*.table-responsive {width: 50%;}
-
- stile del bordo per la tabella (facoltativo) 
-.table-responsive table {border: none;}
-
-/* istruzioni per le celle (alcune sono obbligatorie) */
-.table-responsive table td, .table-responsive table th {min-width: 50px; width: 24%; border: none; word-break: keep-all; text-align: center; padding: 1%;}
-
-/* larghezza delle immagini (facoltativo) 
-.table-responsive table td img {max-width: 98%;}*/
-/*
-.table-responsive table td {width: 24%; word-break: break-all;}
-*/
-
+/* --------------------------------------------------------------------- */
 
 .form-signin {
   width: 100%;
@@ -176,5 +184,3 @@ body button:hover {
   cursor: pointer;
 }
 
-
-/* --------------------------------------------------------------------- */

@@ -25,6 +25,7 @@ var film=new Vue({
     methods:{
         updatePellicola: function(i){
             this.selectedVariant=i;
+            location.href='prossimamente.html#ancora';
         },
 
         locandinaFilm: function(i) {
@@ -33,7 +34,7 @@ var film=new Vue({
     },
 
     computed:{
-        trailer: function() {
+        trailerFilm: function() {
             return this.pellicola[this.selectedVariant].trailer;
         },
         nomeFilm: function() {

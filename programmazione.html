@@ -14,10 +14,9 @@
         <link rel="stylesheet" type="text/css" href="mobiriseicons/30px/mobirise/style.css">
         <link rel="stylesheet" type="text/css" href="stile.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
 
-    <body style="background-color: #434547;">
+    <body>
 
         <div id="top">
             <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
@@ -46,9 +45,8 @@
                     <strong>Sala 1</strong>
                     <br>
                     <span style="float:right">
-                        <button style=" position: relative; margin-bottom: 10%; background-color:chocolate; 
-                            border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
-                         type="button" class="btn right button btn-primary btn-xs" onclick="return passaTitolo('1917');">Aggiungi al Carrello 🛒</button>
+                        <button data-toggle="modal" data-target="#selezione"
+                         type="button" class="bottone btn right button btn-xs" onclick="return passaTitolo('1917');">Aggiungi al Carrello 🛒</button>
                     </span>                   
                 </div>
             </div>
@@ -73,9 +71,8 @@
                     <strong>Sala 2</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="passaTitolo('Once Upon a Time in Hollywood')" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
-                            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
-                         type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
+                        <button onclick="passaTitolo('Once Upon a Time in Hollywood')" data-toggle="modal" data-target="#selezione"
+                         type="button" class="bottone btn right button btn-xs">Aggiungi al Carrello 🛒</button>
                    
                     </span>
                     
@@ -102,9 +99,8 @@
                     <strong>Sala 3</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="passaTitolo('Spider-Man: Far From Home')" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; 
-                            box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);" data-toggle="modal" data-target="#selezione"
-                         type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>
+                        <button onclick="passaTitolo('Spider-Man: Far From Home')" data-toggle="modal" data-target="#selezione"
+                         type="button" class="bottone btn right button btn-xs">Aggiungi al Carrello 🛒</button>
                    
                     </span>
                     
@@ -137,8 +133,8 @@
                     <strong>Sala 4</strong>
                     <br>
                     <span style="float:right">
-                        <button onclick="passaTitolo('Matrix')" style=" position: relative; margin-bottom: 10%; background-color:chocolate; border: none; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);"
-                        data-toggle="modal" data-target="#selezione" type="button" class="btn right button btn-primary btn-xs">Aggiungi al Carrello 🛒</button>                  
+                        <button onclick="passaTitolo('Matrix')"
+                        data-toggle="modal" data-target="#selezione" type="button" class="bottone btn right button btn-xs">Aggiungi al Carrello 🛒</button>                  
                     </span>                   
                 </div>
             </div>
@@ -148,11 +144,11 @@
 
         <!-- Popup -->
 
-        <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1">
+        <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1" style="color: black;">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLongTitle" style="color: black;"><p>Completa i campi per aggiungere al carrello</p>
+                        <h3 class="modal-title" id="exampleModalLongTitle"><p>Completa i campi per aggiungere al carrello</p>
                         <strong id="form_titolofilm"></strong> 
                         </h3>
                         <button type="button" class="close" data-dismiss="modal"></button>
@@ -160,7 +156,7 @@
                     <div class="modal-body">
                         <form name="form_carrello">
                             <div class="form-group">
-                                <label style="color: black;"><h5>Giorno</h5></label> &emsp;
+                                <label ><h5>Giorno</h5></label> &emsp;
                                 <select id="giorno" onchange="return calcolaPrezzo()">
                                     <option value="" selected disabled hidden> Scegli un giorno </option>
                                     <option value="Lunedì"> Lunedì </option>
@@ -173,7 +169,7 @@
                                 </select>
                                 <br>
                                 <br>
-                                <label style="color: black;"><h5>Orario</h5></label> &emsp;
+                                <label><h5>Orario</h5></label> &emsp;
                                 <select id="orario">
                                     <option value="" selected disabled hidden> Scegli un orario </option>
                                     <option value="18"> 18:00 </option>
@@ -181,7 +177,7 @@
                                 </select>
                                 <br>
                                 <br>
-                                <label style="color: black;"><h5>Numero biglietti</h5></label> &emsp;
+                                <label><h5>Numero biglietti</h5></label> &emsp;
                                 <select id="num_biglietti" onchange="return calcolaPrezzo()">
                                     <option value="1" selected>1</option>
                                     <option value="2">2</option>
@@ -196,21 +192,21 @@
                                 <br>
                                 <br>
                                 <input type="radio" id="studente" name="tipo" value="studente"  onchange="return calcolaPrezzo()">
-                                <label for="studente" style="color: black;">Dichiaro di essere uno studente</label><br>
+                                <label for="studente">Dichiaro di essere uno studente universitario</label><br>
                                 <input type="radio" id="minorenne" name="tipo" value="minorenne"  onchange="return calcolaPrezzo()">
-                                <label for="minorenne" style="color: black;">
+                                <label for="minorenne">
                                     Dichiaro di essere minorenne o di avere  diritto al prezzo ridotto
                                 </label>
                                 <br>
                                 <input type="radio" id="" name="tipo" value=""  onchange="return calcolaPrezzo()" checked>
-                                <label for="studente" style="color: black;">Nessuno dei due</label>
+                                <label for="studente">Nessuno dei due</label>
                                 <br>
                                 <br>
                                 <br>
-                                <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
-                                <label style="color: black;">
-                                    <span style="font-style: normal; font-size: x-large;"><strong id="importo">0</strong></span>
-                                    <span style="font-style: normal; font-size: x-large;"><strong>€</strong></span>
+                                <label><h4>Importo totale: </h4></label> &emsp;
+                                <label style="font-style: normal; font-size: x-large;">
+                                    <span><strong id="importo">0</strong></span>
+                                    <span><strong>€</strong></span>
                                 </label>
                             </div>
                         </form>

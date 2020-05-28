@@ -1,12 +1,10 @@
 function validaForm(){
-    /*if(document.myForm.remember.checked){
-        window.alert("Hai scelto di ricordarti per i prossimi accessi");
-    }else{
-        window.alert("Hai scelto di non ricoradrti per i prossimi accessi");
-    }*/
-}
-
-function registrationOK() {
-    window.alert("La registrazione è andata a buon fine!");
+    if(document.myForm.inputName.value.length>20){
+        window.alert("Nome troppo lungo!"); return false;
+    }else if(document.myForm.inputSurname.value.length>20){
+        window.alert("Cognome troppo lungo!"); return false;
+    }else if(document.myForm.inputPassword.value.length<5){
+        window.alert("Password troppo corta!"); return false;
+    }
     return true;
 }

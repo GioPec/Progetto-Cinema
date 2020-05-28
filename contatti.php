@@ -8,7 +8,7 @@
         <script src="bootstrap-4.4.1/dist/js/bootstrap.min.js"></script> <!--serve per il menu a tendina..-->
         <script type="text/javascript" src="functions.js"></script>
         <script type="text/javascript" src="Vue/vue.min.js"></script>
-        <link rel="icon" href="img/icona.ico" style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(101%) contrast(102%)"/> <!--Icona del sito-->
+        <link rel="icon" href="img/icona.ico"/> <!--Icona del sito-->
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1/dist/css/bootstrap-grid.css"/>
         <link rel="stylesheet" type="text/css" href="bobiriseicons/30px/mobirise/style.css">
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body onload="return cambiaAction();" style="background-color: #434547;">
+    <body onload="return verificaAccesso();">
 
         <div id="top">
             <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
@@ -28,7 +28,9 @@
             <h1 style="font-size: 400%;"><strong>Chi siamo</strong></h1>
             <br>
             <p>Cinema Marco Polo è un progetto studentesco indipendente che porta il cinema di qualità a Roma: 
-                film in lingua originale, rassegne e promozioni imperdibili.</p>
+                film in lingua originale, rassegne e promozioni imperdibili.
+                <p>Progetto realizzato da: <strong>Giovanni Pecorelli, Jacopo Rossi, Giacomo Venneri</strong>.</p>
+            </p>    
         </div>
 
         <div class="container">
@@ -66,12 +68,12 @@
 
                 <div>
                     <label><h3>Dacci un voto:</h3></label>
-                    <input id="barra" name='bar' oninput="cambiaBarra()" class="slider" type="range" min="0" max="10" value="10" style="-webkit-appearance: none; height: 20px; width: 25%; margin-left: 25px;">
+                    <input id="barra" name='bar' oninput="cambiaBarra()" class="slider" type="range" min="0" max="10" value="10" style="-webkit-appearance: none; height: 20px; min-width: 150px; width: 25%; margin-left: 25px;">
                     <span><h3 id="valore">10</h3></span>
                 </div>
                 <br><br>
                 
-                <div style="width: 100%;"><label>Mandaci un messaggio:</label><textarea name="ilMessaggio" maxlength="500" class="form-control" rows="10" style="resize: none;"></textarea></div><br>
+                <div class="w-100"><label>Mandaci un messaggio:</label><textarea id="laTextArea" name="ilMessaggio" maxlength="500" class="form-control" rows="10" style="resize: none;"></textarea></div><br>
                 <button id="ilBottone" name="contattiButton" type="submit" class="btn right button btn-primary">Invia</button>
             </form>
 

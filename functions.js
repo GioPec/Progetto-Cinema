@@ -1,4 +1,3 @@
-
 function cambiaBarraBlu() {
     if(window.sessionStorage.getItem("nomeUtente")){
         var nome = window.sessionStorage.getItem("nomeUtente");
@@ -144,6 +143,7 @@ function controllaCompra() {
     var pattern = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
     if(!(document.getElementById("scadenza").value.match(pattern))) { alert("Inserisci una data di scadenza corretta!"); return false; }
     if(document.getElementById("cvv").value.length!=3) { alert("Inserisci un cvv corretto!"); return false; }
+    if(!document.getElementById("check").checked) { alert("Accetta termini e condizioni d'uso!"); return false; }
     else { 
         var arrayVuoto = new Array();
         var arrayVuotoJSON = JSON.stringify(arrayVuoto);
@@ -154,13 +154,17 @@ function controllaCompra() {
     }   
 }
 
-function cambiaAction() {
+function verificaAccesso() {
     var nome = sessionStorage.getItem("nomeUtente");
     if(nome!=null) {
         var destinazione = "/invia.php?name=" + nome;
         document.getElementById("form").action = destinazione;  //(contatti.php, riga 63)
     }
-    else document.getElementById("ilBottone").disabled=true;
+    else {
+        document.getElementById("ilBottone").disabled=true;
+        document.getElementById("laTextArea").disabled=true;
+        document.getElementById("laTextArea").placeholder="Per mandarci un messaggio devi accedere al sito!";
+    }
     return true;
 }
 

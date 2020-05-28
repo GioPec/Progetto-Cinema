@@ -69,7 +69,6 @@ Vue.component('barratop',{
     methods:{
         logoutFunction: function(){
             this.$emit('fai-logout');
-            /*this.variants[this.selectedVariant].disp=this.variants[this.selectedVariant].disp-1;*/
         },
         cambiaCarrello: function(){
             this.$emit('cambia-carrello');
@@ -88,7 +87,6 @@ var top=new Vue({
     
     methods:{
         updateLogin: function(){
-            //window.sessionStorage.removeItem("nomeUtente");
             sessionStorage.clear();
             location=location;
             return true;
@@ -97,7 +95,7 @@ var top=new Vue({
             if(JSON.parse(sessionStorage.getItem("listaOrdini")).length>0) {
                 document.getElementById("iconaCarrello").innerHTML="<img class='navbar-brand icona' v-on:load='cambiaCarrello()' "+
                 "style='filter: invert(89%) sepia(20%) saturate(6714%) hue-rotate(1deg) brightness(104%) contrast(109%);'"+
-                "src='mobiriseicons/30px/svg/mbri-cart-full.svg'/>";
+                "src='mobiriseicons/30px/svg/mbri-cart-full.svg'/>";    //carrello pieno giallo
             }
         }
     }

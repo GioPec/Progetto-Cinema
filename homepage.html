@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body style="background-color: #434547;" onload="return cambiaBarraBlu();">
+    <body onload="return cambiaBarraBlu();">
         
         <div id="top">
             <barratop v-bind:value="sessione" v-on:fai-logout="updateLogin" v-on:cambia-carrello="updateCarrello"></barratop>
@@ -78,32 +78,31 @@
        
         <!-- Tabella prezzi -->
         
-        <div align="center" class="table-responsive blocco" style="width: 650px; max-width: 100%; flex-basis:40%; flex-shrink: 0; margin:auto;">
+        <div align="center" class="tabella">
             <div style="font-size:xx-large; background-color:chocolate; ">
                 <b>I nostri prezzi </b> 
             </div>
             <table>
                 <thead>
-                    
                     <tr>
-                        <th style="text-align: center; font-size: x-large;">Settimana</th>
-                        <th style="text-align: center; font-size: x-large;">Weekend</th>
+                        <th>Settimana</th>
+                        <th>Weekend</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="font-size: x-large;">Adulti:&nbsp;<br>7.50€</td>
-                        <td style="font-size: x-large;">Adulti:&nbsp;<br>9.50€</td>
+                        <td>Adulti:<br>7.50€</td>
+                        <td>Adulti:<br>9.50€</td>
                     
                     </tr>
                     <tr>
-                        <td style="font-size: x-large;">Ridotto:&nbsp;<br>5.00€</td>
-                        <td style="font-size: x-large;">Ridotto:&nbsp;<br>6.50€</td>
+                        <td>Ridotto:<br>5.00€</td>
+                        <td>Ridotto:<br>6.50€</td>
                         
                     </tr>
                     <tr>
-                        <td style="font-size: x-large;">Università:&nbsp;<br>3.30€</td>
-                        <td style="font-size: x-large;">Università:&nbsp;<br>5.50€</td>
+                        <td>Università:<br>3.30€</td>
+                        <td>Università:<br>5.50€</td>
                     </tr>
                 </tbody>
             </table>
