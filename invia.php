@@ -2,7 +2,7 @@
     <head></head>
     <body>
         <?php
-            $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
+            $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
                 or die('Could not connect: ' . pg_last_error());
             
             $nome=$_GET['name'];

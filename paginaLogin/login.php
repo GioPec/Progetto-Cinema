@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php
-            $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
+            $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
             or die('Could not connect: ' . pg_last_error());
             if(!(isset($_POST['loginButton']))){    //accesso solo da html
                 header("Location: ../homepage.html");

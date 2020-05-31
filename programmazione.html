@@ -24,13 +24,13 @@
 
         <!-- Fine navbar -->
 
-        <div align="center" style="padding-top: 70px; padding-bottom: 70px;">
-            <h1 style="font-size: 400%;"><strong>Nelle sale</strong></h1>
+        <div class="text-center intestazione">
+            <h1><strong>Nelle sale</strong></h1>
         </div>
         
         <div class="container sfondoLocandina" style="background-image: url('img/1917.jpeg');">
             <div class="filtro"></div>
-            <div class="row" style="position: relative; z-index: 1;">
+            <div class="row divLocandina">
                 <div class="col-lg">
                     <img src="img/1917-playbill.jpg" width="43%" class="locandina"></img>
                 </div>
@@ -44,7 +44,7 @@
                      Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 1</strong>
                     <br>
-                    <span style="float:right">
+                    <span class="allineamento-destra">
                         <button data-toggle="modal" data-target="#selezione"
                          type="button" class="bottone btn right button btn-xs" onclick="return passaTitolo('1917');">Aggiungi al Carrello 🛒</button>
                     </span>                   
@@ -56,7 +56,7 @@
 
         <div class="container sfondoLocandina" style="background-image: url('img/hollywood.jpg');">
             <div class="filtro"></div>
-            <div class="row"  style="position: relative; z-index: 1;">
+            <div class="row divLocandina">
                 <div class="col-lg">
                     <img src="img/hollywood-playbill.jpg" width="47%" class="locandina"></img>
                 </div>
@@ -70,7 +70,7 @@
                      Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 2</strong>
                     <br>
-                    <span style="float:right">
+                    <span class="allineamento-destra">
                         <button onclick="passaTitolo('Once Upon a Time in Hollywood')" data-toggle="modal" data-target="#selezione"
                          type="button" class="bottone btn right button btn-xs">Aggiungi al Carrello 🛒</button>
                    
@@ -84,7 +84,7 @@
 
         <div class="container sfondoLocandina" style="background-image: url('img/spiderman.jpg');">
              <div class="filtro"></div>
-            <div class="row"  style="position: relative; z-index: 1;">
+            <div class="row divLocandina">
                 <div class="col-lg">
                     <img src="img/spiderman-playbill.jpg" width="47%" class="locandina"></img>
                 </div>
@@ -98,7 +98,7 @@
                      Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 3</strong>
                     <br>
-                    <span style="float:right">
+                    <span class="allineamento-destra">
                         <button onclick="passaTitolo('Spider-Man: Far From Home')" data-toggle="modal" data-target="#selezione"
                          type="button" class="bottone btn right button btn-xs">Aggiungi al Carrello 🛒</button>
                    
@@ -114,11 +114,11 @@
         <div class="container sfondoLocandina" style="background-image: url('img/matrix.jpg');">
              <div class="filtro"></div>
 
-            <div style="background-color: brown; text-align: center; padding: 10px; position: relative; z-index: 1; width: 100%;">
+            <div class="grandi-classici">
                 <h2>Per la rassegna: <strong>i grandi classici</strong></h2>
             </div>
 
-            <div class="row" style="position: relative; z-index: 1;">
+            <div class="row divLocandina">
                 <div class="col-lg">
                     <img src="img/matrix-playbill.jpg" width="47%" class="locandina"></img>
                 </div>
@@ -132,7 +132,7 @@
                     Lunedì-Domenica: 18:00, 21:00<br><br>
                     <strong>Sala 4</strong>
                     <br>
-                    <span style="float:right">
+                    <span class="allineamento-destra">
                         <button onclick="passaTitolo('Matrix')"
                         data-toggle="modal" data-target="#selezione" type="button" class="bottone btn right button btn-xs">Aggiungi al Carrello 🛒</button>                  
                     </span>                   
@@ -144,7 +144,7 @@
 
         <!-- Popup -->
 
-        <div class="modal fade bd-example-modal-lg" id="selezione" tabindex="-1" style="color: black;">
+        <div class="modal fade bd-example-modal-lg nero" id="selezione" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -213,8 +213,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="inviaDati();" 
-                            style="background-color:chocolate; border: none;">Invia al Carrello 🛒
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="inviaDati();"
+                        style="background-color:chocolate; border: none;">
+                            Invia al Carrello 🛒
                         </button>
                     </div>
                 </div>

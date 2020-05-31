@@ -23,8 +23,8 @@
 
         <!--############################# Fine navbar ################################-->
         
-        <div name="trailer" align="center" style="padding-top: 50px; padding-bottom: 50px;">
-            <h1 style="font-size: 400%;"><strong>In arrivo</strong></h1>
+        <div class="text-center intestazione" name="trailer">
+            <h1><strong>In arrivo</strong></h1>
         </div>
         
 
@@ -32,12 +32,12 @@
             <div class="container"> 
                 <div class="row">
                     <div class="col-xl-8">
-                        <iframe width="100%" height="400px" v-bind:src="trailerFilm" style="border: solid chocolate 12px"
+                        <iframe class="frame-film" width="100%" height="400px" v-bind:src="trailerFilm"
                         frameborder="1" allowfullscreen></iframe>
                     </div>
         
                     <div class="col-lg">
-                        <h2 style="font-size: 250%;"><strong>{{ nomeFilm }}</strong></h2>
+                        <h2 class="titolo-film"><strong>{{ nomeFilm }}</strong></h2>
                         <br>
                         <p>{{ descrizioneFilm }}</p><br>
                     </div>
@@ -45,14 +45,13 @@
             </div>
 
             <br><br>
-            <h2 class="my_div" style="margin-top: 20px; background-color: #2676C0; margin: auto; width: 90%;">Clicca sulla locandina per vedere il trailer</h2>
+            <h2 class="my_div descrizione-div-film" >Clicca sulla locandina per vedere il trailer</h2>
             <br>
             
-            <div style="background-color: #2f3133; box-shadow: 5px 5px 5px rgba(0, 0, 0, .5); width: 90%; margin: auto;
-                height: 40%; white-space: nowrap; overflow-x: scroll;">
+            <div class="div-film">
                 
                     <img v-for="(x,index) in pellicola" v-bind:src="locandinaFilm(index)" 
-                    v-on:click="updatePellicola(index)" width="13%" style="margin: 20px; margin-right: 9%;"/>
+                    v-on:click="updatePellicola(index)" width="13%" />
                    
             </div>
         </div>

@@ -6,7 +6,7 @@ Vue.component('barratop',{
         }
     },
     template:`
-    <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top" style="text-align: center; background-color: #2f3133; box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);">
+    <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top navtop">
         
             <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
           <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
@@ -19,19 +19,19 @@ Vue.component('barratop',{
                    <li align="left">   <!--Uso semplicemente il tag <li> con dentro un <img> per il logo del cinema-->
                        <img onclick="location.href='homepage.html'" class=" iconahome " src="img/cmp2.png" height="70px"/>
                    </li>
-                   <li class="nav-item" style="padding-right: 15px;">
+                   <li class="nav-item link-pad">
                        <a class="nav-link" href="programmazione.html" style="color: white;">Programmazione
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-video-play.svg"/>
                        </a>
                    </li>
 
-                   <li class="nav-item" style="padding-right: 15px;">
+                   <li class="nav-item link-pad">
                        <a class="nav-link" href="prossimamente.html" style="color: white;">Prossimamente
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-calendar.svg"/>
                        </a>
                    </li>
                    
-                   <li class="nav-item" style="padding-right: 15px;">
+                   <li class="nav-item link-pad">
                        <a class="nav-link" href="contatti.php" style="color: white;">Contatti
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-edit.svg"/>
                        </a>
@@ -39,7 +39,7 @@ Vue.component('barratop',{
                </ul>
                <!--creo la seconda unordered list per gli elementi a destra-->
                <ul class="navbar-nav ml-auto"> <!--li allineo a destra grazie a ml-auto-->
-                   <li id="top" class="nav-item "style="padding-right: 15px;">
+                   <li id="top" class="nav-item link-pad">
 
                        <a v-if="value == null" id="usernameInNavbar" class="nav-link" href="paginaLogin/login.html" style="color: white;">Login
                            <img class="navbar-brand icona" src="mobiriseicons/30px/svg/mbri-login.svg"/>
@@ -109,10 +109,10 @@ Vue.component('barrasotto',{
             </a>
             <div class="my_div">
                 Contattaci qui:
-                <a href="https://www.facebook.com/" class="btn btn-primary btn-lg, fa fa-facebook" role="button" style="margin: 4px;"></a>
-                <a href="https://twitter.com/" class="btn btn-primary btn-lg, fa fa-twitter" role="button" style="margin: 4px;"></a>
-                <a href="https://www.instagram.com/" class="btn btn-primary btn-lg, fa fa-instagram" role="button" style="margin: 4px;"></a>
-                <a href="https://mail.google.com/" class="btn btn-primary btn-lg, fa fa-envelope" role="button" style="margin: 4px;"></a>
+                <a href="https://www.facebook.com/" class="btn btn-primary btn-lg, fa fa-facebook social-m" role="button"></a>
+                <a href="https://twitter.com/" class="btn btn-primary btn-lg, fa fa-twitter social-m" role="button"></a>
+                <a href="https://www.instagram.com/" class="btn btn-primary btn-lg, fa fa-instagram social-m" role="button"></a>
+                <a href="https://mail.google.com/" class="btn btn-primary btn-lg, fa fa-envelope social-m" role="button"></a>
             </div>
 
             <div class="my_div" style="background-color:brown;">

@@ -24,8 +24,8 @@
 
         <!--############################# Fine navbar ################################-->
 
-        <div align="center" style="padding-top: 70px; padding-bottom: 85px;">
-            <h1 style="font-size: 400%;"><strong>Chi siamo</strong></h1>
+        <div class="text-center intestazione">
+            <h1><strong>Chi siamo</strong></h1>
             <br>
             <p>Cinema Marco Polo è un progetto studentesco indipendente che porta il cinema di qualità a Roma: 
                 film in lingua originale, rassegne e promozioni imperdibili.
@@ -35,8 +35,8 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg" style="text-align: right;">
-                    <h2 style="font-size: 250%;"><strong>Dove puoi trovarci</strong></h2>
+                <div class="col-lg text-right">
+                    <h2 class="titolo-film"><strong>Dove puoi trovarci</strong></h2>
                     <br>
                     <p>
                     Viale dello Scalo S. Lorenzo, 82<br>
@@ -58,8 +58,8 @@
 
         <br><br>
 
-        <div align="center" style="margin-bottom: 80px; width: 50%; margin: auto">
-            <h1 style="font-size: 250%;" style="float: left"><strong>Facci sapere la tua</strong></h1>
+        <div class="text-center div-opinioni" >
+            <h1><strong>Facci sapere la tua</strong></h1>
             <br>
             <form id="form" action="" method="POST">
                 
@@ -68,7 +68,7 @@
 
                 <div>
                     <label><h3>Dacci un voto:</h3></label>
-                    <input id="barra" name='bar' oninput="cambiaBarra()" class="slider" type="range" min="0" max="10" value="10" style="-webkit-appearance: none; height: 20px; min-width: 150px; width: 25%; margin-left: 25px;">
+                    <input id="barra" name='bar' oninput="cambiaBarra()" class="slider" type="range" min="0" max="10" value="10">
                     <span><h3 id="valore">10</h3></span>
                 </div>
                 <br><br>
@@ -79,7 +79,7 @@
 
             <?php
 
-                $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
+                $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
                     or die('Could not connect: ' . pg_last_error());
 
                 $query="select round(avg(voto), 2) from opinioni";

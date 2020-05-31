@@ -25,7 +25,7 @@ var film=new Vue({
     methods:{
         updatePellicola: function(i){
             this.selectedVariant=i;
-            window.scrollTo(0, 120);
+            window.scrollTo(0, 130);
         },
 
         locandinaFilm: function(i) {
