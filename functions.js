@@ -1,3 +1,7 @@
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
 function cambiaBarraBlu() {
     if(window.sessionStorage.getItem("nomeUtente")){
         var nome = window.sessionStorage.getItem("nomeUtente");
@@ -86,7 +90,7 @@ function inviaDati() {
     location=location;  //per aggiornare l'icona cart-full
 }
 
-function calcolaPrezzo(){
+function calcolaPrezzo() {
     var giorno = document.getElementById("giorno").value;
     var n = document.getElementById("num_biglietti").value;
     var tipo = document.forms.form_carrello.tipo.value;
@@ -123,17 +127,18 @@ function calcolaPrezzo(){
     return true;
 }
 
-function passaTitolo(titolo){
+function passaTitolo(titolo) {
     document.getElementById('form_titolofilm').innerHTML=titolo;
     return true;
 }
 
+//jquery
 function cambiaLogo() {
-    var ilMetodo = document.getElementById("metodoPagamento").value;
-    if (ilMetodo=="") document.getElementById("logo").innerHTML="";
-    else if (ilMetodo=="Visa") document.getElementById("logo").innerHTML="<i class='fa fa-cc-visa' style='color: chocolate; font-size: 60px;'></i></div>";
-    else if (ilMetodo=="Mastercard") document.getElementById("logo").innerHTML="<i class='fa fa-cc-mastercard' style='color: chocolate; font-size: 60px;'></i></div>";
-    else document.getElementById("logo").innerHTML="<i class='fa fa-cc-amex' style='color: chocolate; font-size: 60px;'></i></div>";
+    var ilMetodo=$("#metodoPagamento").val();
+    if (ilMetodo=="") $("span.logo2").html("");
+    else if (ilMetodo=="Visa") $("span.logo2").html("<i class='fa fa-cc-visa' style='color: chocolate; font-size: 60px;'></i></div>");
+    else if (ilMetodo=="Mastercard") $("span.logo2").html("<i class='fa fa-cc-mastercard' style='color: chocolate; font-size: 60px;'></i></div>");
+    else $("span.logo2").html("<i class='fa fa-cc-amex' style='color: chocolate; font-size: 60px;'></i></div>");
 }
 
 function controllaCompra() {

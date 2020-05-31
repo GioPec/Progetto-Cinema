@@ -78,7 +78,6 @@
             </form>
 
             <?php
-                echo '<br><h3>La nostra media attuale: </h3>';
 
                 $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
                     or die('Could not connect: ' . pg_last_error());
@@ -86,7 +85,10 @@
                 $query="select round(avg(voto), 2) from opinioni";
                 $result=pg_query($dbconn, $query);
                 
-                if($line=pg_fetch_array($result, null, PGSQL_ASSOC)) echo ('<h3>' . implode($line) . '</h3>');
+                $media="";
+                if($line=pg_fetch_array($result, null, PGSQL_ASSOC)) $media = implode($line);
+                if($media=="") { echo('<h3>Non abbiamo ancora ricevuto valutazioni.</h3>'); }
+                else echo ('<br><h3>La nostra media attuale: ' . implode($line) . '</h3>'); 
             ?>
 
             <br><br><br>

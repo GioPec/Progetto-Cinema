@@ -104,7 +104,7 @@ var top=new Vue({
 Vue.component('barrasotto',{
     template:`
     <footer name="bottomdiv" style="background-color:chocolate; bottom: 0;">
-            <a href="#top" id="navBackToTop">
+            <a onClick="scrollToTop()" id="navBackToTop" style='cursor: pointer;'>
                 <div class="my_div" style="background-color:#2f3133;">Torna su</div>
             </a>
             <div class="my_div">

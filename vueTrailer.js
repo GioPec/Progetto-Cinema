@@ -25,7 +25,7 @@ var film=new Vue({
     methods:{
         updatePellicola: function(i){
             this.selectedVariant=i;
-            location.href='prossimamente.html#ancora';
+            window.scrollTo(0, 120);
         },
 
         locandinaFilm: function(i) {
