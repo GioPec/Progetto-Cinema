@@ -15,28 +15,28 @@
 
     <body style="margin-top: -85px;" onload="return mostraAcquisti();">
 
-        <a href="homepage.html"><h1 style="font-size: 80px; background-color: brown; color: white;"><strong>Cinema Marco Polo</strong></h1></a>
+        <a href="homepage.html"><h1 class="titolo-carrello"><strong>Cinema Marco Polo</strong></h1></a>
 
-        <h1 style="font-size: 65px; background-color: chocolate;"><strong>Il tuo carrello</strong></h1>
+        <h1 class="info-carrello"><strong>Il tuo carrello</strong></h1>
   
-            <div id="daRiempire" style="width: 50%; margin: auto;">
+            <div id="daRiempire" class="ordine-carrello">
                <!-- ordini qui -->      
             </div>  
 
             <br><br>
 
-            <div class="my_div" style="background-color: chocolate; width: 80%; margin: auto;">
+            <div class="my_div descrizione-div-carrello">
                 <h2><strong>Completa l'acquisto</strong></h>
             </div>
 
             <br><br>
 
-            <div class="form-group" style="width: 50%; min-width: 300px; margin: auto; background-color: rgb(253, 231, 170); border: solid black 3px">
-                <div style="margin-left: 15px;">
+            <div class="form-group acquisti-carrello">
+                <div class="margini-sinistra">
                     <br>
-                    <h1 align ="center" style="color: black;"><strong>Il tuo ordine</strong></h1>
+                    <h1 class="text-center nero"><strong>Il tuo ordine</strong></h1>
                     <br>
-                    <label style="color: black;"><h5>Seleziona il metodo di pagamento:</h5></label> &emsp;
+                    <label class="nero"><h5>Seleziona il metodo di pagamento:</h5></label> &emsp;
                     <span>
                         <select id="metodoPagamento" onchange="return cambiaLogo()">
                             <option class="pagamento" value="" selected disabled hidden> Pago con... </option>
@@ -48,21 +48,21 @@
                     <span class="logo2" id="logo"><!-- da riempire --></span>
                     <br>
 
-                    <label style="color: black;">Intestatario carta</label>
+                    <label class="nero">Intestatario carta</label>
                     <input id="intestatario" type="text" size="20"><br>
-                    <label style="color: black;">Numero carta</label>
+                    <label class="nero">Numero carta</label>
                     <input id="numeroCarta" type="number" size="16"><br>
-                    <label style="color: black;">Scadenza</label>
+                    <label class="nero">Scadenza</label>
                     <input id="scadenza" type="text" size="5"><br>
-                    <label style="color: black;">CVV</label>
+                    <label class="nero">CVV</label>
                     <input id="cvv" type="number" size="3">
                     <br>
-                    <input id="check" type="checkbox"><label style="color: black;">Ho letto e accetto i <a href="">termini e le condizioni d'uso</a></label>
+                    <input id="check" type="checkbox"><label class="nero">Ho letto e accetto i <a href="javascript:void(0)">termini e le condizioni d'uso</a></label>
                     <br>
                     <br>
                     <br>
-                    <label style="color: black;"><h4>Importo totale: </h4></label> &emsp;
-                    <label style="color: black;"><h4 id="importo_tot"></h4></label> 
+                    <label class="nero"><h4>Importo totale: </h4></label> &emsp;
+                    <label class="nero"><h4 id="importo_tot"></h4></label> 
                 </div>
                 <div class="modal-footer">
                     <button onclick="return controllaCompra();" type="button" class="btn btn-primary"

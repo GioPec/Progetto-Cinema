@@ -37,7 +37,9 @@ body button:hover {
 .intestazione h1{
   font-size: 400%;
 }
-
+.margini-sinistra{
+  margin-left: 15px;
+}
 /* --------------------------------------------------------------------- */
 .navtop{
   text-align: center; 
@@ -324,4 +326,30 @@ body button:hover {
 }
 .link-pad{
   padding-right: 15px;
+}
+
+.titolo-carrello{
+  font-size: 80px;
+  background-color: brown; 
+  color: white;
+}
+.info-carrello{
+  font-size: 65px; 
+  background-color: chocolate;
+}
+.ordine-carrello{
+  width: 50%; 
+  margin: auto;
+}
+.descrizione-div-carrello{
+  background-color: chocolate;
+  width: 80%; 
+  margin: auto;
+}
+.acquisti-carrello{
+  width: 50%; 
+  min-width: 300px; 
+  margin: auto; 
+  background-color: rgb(253, 231, 170); 
+  border: solid black 3px;
 }

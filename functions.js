@@ -1,7 +1,3 @@
-function scrollToTop() {
-    window.scrollTo(0, 0);
-}
-
 function cambiaBarraBlu() {
     if(window.sessionStorage.getItem("nomeUtente")){
         var nome = window.sessionStorage.getItem("nomeUtente");

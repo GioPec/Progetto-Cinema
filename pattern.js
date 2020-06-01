@@ -9,14 +9,14 @@ Vue.component('barratop',{
     <nav name="top" class="navbar navbar-expand-md navbar-dark fixed-top navtop">
         
             <!--crea il bottone del menu a tendina quando rimpicciolisco la pagina web-->
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#barra_navigazione">
                <span class="navbar-toggler-icon"></span>
           </button>
                                                
-           <div class="collapse navbar-collapse" id="collapse_target"><!--id deve essere uguale a data-target-->
+           <div class="collapse navbar-collapse" id="barra_navigazione"><!--id deve essere uguale a data-target-->
            
                <ul class="navbar-nav">
-                   <li align="left">   <!--Uso semplicemente il tag <li> con dentro un <img> per il logo del cinema-->
+                   <li align="left"> 
                        <img onclick="location.href='homepage.html'" class=" iconahome " src="img/cmp2.png" height="70px"/>
                    </li>
                    <li class="nav-item link-pad">
@@ -77,8 +77,6 @@ Vue.component('barratop',{
 })
 
 
-
-
 var top=new Vue({
     el: '#top',
     data:{
@@ -101,10 +99,13 @@ var top=new Vue({
     }
 });
 
+
+
+
 Vue.component('barrasotto',{
     template:`
     <footer name="bottomdiv" style="background-color:chocolate; bottom: 0;">
-            <a onClick="scrollToTop()" id="navBackToTop" style='cursor: pointer;'>
+            <a onClick="window.scrollTo(0, 0);" id="navBackToTop" style='cursor: pointer;'>
                 <div class="my_div" style="background-color:#2f3133;">Torna su</div>
             </a>
             <div class="my_div">

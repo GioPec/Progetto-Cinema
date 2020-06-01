@@ -24,8 +24,8 @@
                     if($data){
                         header("Location: ../paginaLogin/login.html");
                     }
+                }
             }
-        }
         ?>
     </body>
 </html>
