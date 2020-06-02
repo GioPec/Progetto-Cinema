@@ -41,9 +41,9 @@
                     Viale dello Scalo S. Lorenzo, 82<br>
                     00159 Roma RM<br><br>
                     
-                    <strong>Numero di telefono:</strong> 987-654321<br><br>
+                    <strong>Numero di telefono:</strong> 981-134311<br><br>
                     
-                    <strong>Email:</strong> <a href="https://mail.google.com/"><strong>cinemamarcopolo@cinemas.it</strong></a><br><br>
+                    <strong>Email:</strong> <a href="mailto:cinemamarcopolo@gmail.com"><strong>cinemamarcopolo@gmail.com</strong></a><br><br>
                     
                     <strong>Orari:</strong> Lunedì - Domenica: 17:00 - 00:00</p><br>
                 </div>
@@ -78,7 +78,7 @@
 
             <?php
 
-                $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
+                $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
                     or die('Could not connect: ' . pg_last_error());
 
                 $query="select round(avg(voto), 2) from opinioni";

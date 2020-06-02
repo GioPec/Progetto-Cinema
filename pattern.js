@@ -110,10 +110,10 @@ Vue.component('barrasotto',{
             </a>
             <div class="my_div">
                 Contattaci qui:
-                <a href="https://www.facebook.com/" class="btn btn-primary btn-lg, fa fa-facebook social-m" role="button"></a>
-                <a href="https://twitter.com/" class="btn btn-primary btn-lg, fa fa-twitter social-m" role="button"></a>
-                <a href="https://www.instagram.com/" class="btn btn-primary btn-lg, fa fa-instagram social-m" role="button"></a>
-                <a href="https://mail.google.com/" class="btn btn-primary btn-lg, fa fa-envelope social-m" role="button"></a>
+                <a href="https://www.facebook.com/Cinema-Marco-Polo-109077944165195/" class="btn btn-primary btn-lg, fa fa-facebook social-m" role="button"></a>
+                <a href="https://twitter.com/CinemaPolo/" class="btn btn-primary btn-lg, fa fa-twitter social-m" role="button"></a>
+                <a href="https://www.instagram.com/cinemamarcopolo/" class="btn btn-primary btn-lg, fa fa-instagram social-m" role="button"></a>
+                <a href="mailto:cinemamarcopolo@gmail.com" class="btn btn-primary btn-lg, fa fa-envelope social-m" role="button"></a>
             </div>
 
             <div class="my_div" style="background-color:brown;">
