@@ -128,7 +128,6 @@ function passaTitolo(titolo) {
     return true;
 }
 
-//jquery
 function cambiaLogo() {
     var ilMetodo=$("#metodoPagamento").val();
     if (ilMetodo=="") $("span.logo2").html("");

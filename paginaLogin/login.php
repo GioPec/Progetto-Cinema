@@ -1,11 +1,11 @@
 
 <html>
     <head>
-        <script type="text/javascript" lang="javascript" src="ScriptLog.js"></script>
+      <!--  <script type="text/javascript" lang="javascript" src="ScriptLog.js"></script> -->
     </head>
     <body>
         <?php
-            $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
+            $dbconn= pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
             or die('Could not connect: ' . pg_last_error());
             if(!(isset($_POST['loginButton']))){    //accesso solo da html
                 header("Location: ../homepage.html");

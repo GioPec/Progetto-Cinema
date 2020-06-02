@@ -78,7 +78,7 @@
 
             <?php
 
-                $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin-user")
+                $dbconn=pg_connect("host=localhost port=5432 dbname=CinemaMarcoPolo user=postgres password=admin")
                     or die('Could not connect: ' . pg_last_error());
 
                 $query="select round(avg(voto), 2) from opinioni";
